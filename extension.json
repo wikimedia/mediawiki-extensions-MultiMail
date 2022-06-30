@@ -1,0 +1,133 @@
+{
+	"name": "MultiMail",
+	"author": [
+		"Mainframe98"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:MultiMail",
+	"descriptionmsg": "multimail-desc",
+	"namemsg": "multimail-extensionname",
+	"license-name": "MIT",
+	"type": "specialpage",
+	"requires": {
+		"MediaWiki": ">=1.38.0"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\MultiMail\\": "src/"
+	},
+	"TestAutoloadNamespaces": {
+		"MediaWiki\\Extension\\MultiMail\\Tests\\": "tests/phpunit/"
+	},
+	"MessagesDirs": {
+		"MultiMail": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"MultiMailAlias": "MultiMail.alias.php"
+	},
+	"ResourceModules": {
+		"ext.MultiMail": {
+			"localBasePath": "resources/ext.MultiMail",
+			"remoteExtPath": "MultiMail/resources/ext.MultiMail",
+			"packageFiles": [
+				"main.js",
+				"NewEmailAddressDialog.js",
+				"ConfirmActionDialog.js",
+				"ReauthenticationRequestDialog.js",
+				{
+					"name": "config.json",
+					"config": [
+						"EmailAuthentication"
+					]
+				}
+			],
+			"targets": [
+				"desktop",
+				"mobile"
+			],
+			"messages": [
+				"multimail-special-add-email-view-with-confirmation-summary",
+				"multimail-special-add-email-view-summary",
+				"multimail-special-change-primary-view-confirmation",
+				"multimail-special-add-email-view-submit-button-label-message",
+				"multimail-special-add-email-view-confirmation-sent",
+				"multimail-js-dialog-cancel",
+				"multimail-js-reauthentication-check",
+				"multimail-js-reauthentication-required",
+				"multimail-special-delete-view-confirmation",
+				"multimail-special-delete-view-confirmation-submit-label-message",
+				"multimail-emails-pager-make-primary-button-label"
+			],
+			"dependencies": [
+				"oojs-ui-windows",
+				"mediawiki.Uri"
+			]
+		},
+		"ext.MultiMail.styles": {
+			"styles": [
+				"ext.MultiMail.styles/styles.less"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "MultiMail/resources"
+	},
+	"ConfigRegistry": {
+		"MultiMail": "GlobalVarConfig::newInstance"
+	},
+	"ServiceWiringFiles": [
+		"src/ServiceWiring.php"
+	],
+	"SpecialPages": {
+		"EmailAddresses": {
+			"class": "MediaWiki\\Extension\\MultiMail\\Specials\\SpecialEmailAddresses",
+			"services": [
+				"AuthManager",
+				"MultiMail.MailManager",
+				"CentralIdLookup"
+			]
+		}
+	},
+	"APIModules": {
+		"multimail": {
+			"class": "MediaWiki\\Extension\\MultiMail\\Api\\MultiMailModule",
+			"services": [
+				"MultiMail.MailManager",
+				"AuthManager"
+			]
+		}
+	},
+	"HookHandlers": {
+		"email": {
+			"class": "MediaWiki\\Extension\\MultiMail\\Hook\\EmailHandler",
+			"services": [
+				"MultiMail.MailManager"
+			]
+		},
+		"setup": {
+			"class": "MediaWiki\\Extension\\MultiMail\\Hook\\SetupHandler"
+		}
+	},
+	"Hooks": {
+		"ApiQueryTokensRegisterTypes": "setup",
+		"LoadExtensionSchemaUpdates": "setup",
+		"LoginFormValidErrorMessages": "setup",
+		"ConfirmEmailComplete": "email",
+		"PrefsEmailAudit": "email"
+	},
+	"GroupPermissions": {
+		"*": {
+			"multimail": true
+		}
+	},
+	"AvailableRights": [
+		"multimail"
+	],
+	"config": {
+		"MultiMailDB": {
+			"value": false
+		}
+	},
+	"manifest_version": 2
+}

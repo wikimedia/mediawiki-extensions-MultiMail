@@ -1,0 +1,89 @@
+[
+	{
+		"name": "user_secondary_email",
+		"comment": "",
+		"columns": [
+			{
+				"name": "use_id",
+				"comment": "Row id. Used to distinguish between email addresses without explicitly specifying the email address. It also allows identifying which email was added first.",
+				"type": "integer",
+				"options": {
+					"unsigned": true,
+					"notnull": true,
+					"autoincrement": true
+				}
+			},
+			{
+				"name": "use_cuid",
+				"comment": "Central id of the user",
+				"type": "integer",
+				"options": {
+					"unsigned": true,
+					"notnull": true
+				}
+			},
+			{
+				"name": "use_email",
+				"comment": "Email address",
+				"type": "text",
+				"options": {
+					"notnull": true,
+					"length": 255
+				}
+			},
+			{
+				"name": "use_email_authenticated",
+				"comment": "Initially NULL; when this e-mail address has been validated by returning with a mailed token, this is set to the current timestamp.",
+				"type": "mwtimestamp",
+				"options": {
+					"notnull": false
+				}
+			},
+			{
+				"name": "use_email_token",
+				"comment": "Randomly generated token created when this e-mail address is set and a confirmation test mail sent.",
+				"type": "binary",
+				"options": {
+					"notnull": false,
+					"length": 32,
+					"fixed": true
+				}
+			},
+			{
+				"name": "use_email_token_expires",
+				"comment": "Expiration date for the use_email_token.",
+				"type": "mwtimestamp",
+				"options": {
+					"notnull": false
+				}
+			}
+		],
+		"indexes": [
+			{
+				"name": "use_cuid",
+				"columns": [ "use_cuid" ],
+				"unique": false
+			},
+			{
+				"name": "use_email_token",
+				"columns": [ "use_email_token" ],
+				"unique": false
+			},
+			{
+				"name": "use_email",
+				"columns": [ "use_email" ],
+				"unique": false,
+				"options": {
+					"lengths": [
+						50,
+						null,
+						null
+					]
+				}
+			}
+		],
+		"pk": [
+			"use_id"
+		]
+	}
+]
