@@ -123,7 +123,7 @@ class EmailsPager extends TablePager {
 
 			if ( !$isAuthenticated ) {
 				if ( $isPrimary ) {
-					$title = SpecialPage::getTitleFor( 'ConfirmEmail' );
+					$title = SpecialPage::getTitleFor( 'Confirmemail' );
 				} else {
 					$title = $specialPageTitle->getSubpage( "confirm/$value" );
 				}

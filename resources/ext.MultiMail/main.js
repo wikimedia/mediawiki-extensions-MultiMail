@@ -26,7 +26,7 @@ function main() {
 	 *
 	 * @param {number} buttonId
 	 * @param {string} win
-	 * @param {object} data
+	 * @param {Object} data
 	 */
 	function verifyAuthenticationStatus( buttonId, win, data ) {
 		// This is equivalent to OO.ui.alert, but uses the current window manager.
@@ -34,7 +34,7 @@ function main() {
 			message: mw.msg(
 				'multimail-js-reauthentication-check'
 			)
-		} ).closed.then( function() {
+		} ).closed.then( function () {
 			api.abort();
 		} );
 
@@ -60,8 +60,8 @@ function main() {
 					'multimail-js-reauthentication-required',
 					mw.msg( 'ooui-dialog-message-accept' )
 				)
-			} ).closed.then( function ( data ) {
-				if ( !data || data.action !== 'accept' ) {
+			} ).closed.then( function ( confirmData ) {
+				if ( !confirmData || confirmData.action !== 'accept' ) {
 					return;
 				}
 
