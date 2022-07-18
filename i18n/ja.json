@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"MathXplore"
+		]
+	},
+	"multimail-special-emailaddresses": "メールアドレス",
+	"multimail-emails-pager-email": "メールアドレス",
+	"multimail-emails-pager-status": "ステータス",
+	"multimail-emails-pager-buttons": "管理",
+	"multimail-emails-pager-no-confirmation-needed": "確認は必要ありません",
+	"multimail-emails-pager-unconfirmed": "未確認",
+	"multimail-emails-pager-confirm-button-label": "確認",
+	"multimail-emails-pager-delete-label": "メールアドレスを削除する",
+	"tooltip-multimail-emails-pager-delete-label": "メールアドレスを削除する",
+	"multimail-special-add-email-view": "新しいメールアドレスを追加します",
+	"multimail-special-add-email-view-new-email-label-message": "新しいメールアドレス:",
+	"multimail-invalid-email": "これは有効なメールアドレスではありません。",
+	"multimail-special-add-email-view-submit-button-label-message": "新しいメールアドレスを追加する",
+	"tooltip-multimail-special-add-email-view-submit": "新しいメールアドレスを追加する",
+	"multimail-special-add-email-view-confirmation-sent": "確認コードがあなたのメールアドレスに送信されました。",
+	"multimail-emails-confirm-success": "あなたのメールアドレスは既に確認されました。",
+	"multimail-special-delete-view-confirmation-submit-label-message": "メールアドレスを削除する",
+	"tooltip-multimail-special-delete-view-confirmation-submit": "メールアドレスを削除する",
+	"multimail-special-request-confirmation-code-view-confirmation-email-sent": "新しい確認コードがあなたのメールアドレスに送信されました。",
+	"multimail-email-disabled": "メールが無効になっています",
+	"multimail-manager-address-already-exists": "このメールアドレスはすでにこのアカウントにリンクされています。",
+	"multimail-emails-invalid-id": "無効なメールアドレスです",
+	"multimail-emails-invalid-id-body": "選択したメールアドレスは有効なメールアドレスではありません。",
+	"multimail-manager-no-such-email-in-db": "データベースからこのメールアドレスが見つかりませんでした。",
+	"multimail-js-dialog-cancel": "キャンセル",
+	"apihelp-multimail-param-email": "メールアドレス"
+}
