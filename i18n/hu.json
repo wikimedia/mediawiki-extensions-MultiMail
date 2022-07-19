@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hanna Tardos"
+		]
+	},
+	"multimail-special-emailaddresses": "E-mail címek",
+	"multimail-emails-add-email-button-label": "Új cím hozzáadása",
+	"multimail-emails-pager-email": "E-mail cím",
+	"multimail-emails-pager-status": "Állapot",
+	"tooltip-multimail-emails-pager-make-primary-button-label": "Legyen ez az elsődleges e-mail cím",
+	"multimail-emails-pager-primary": "Elsődleges",
+	"multimail-emails-pager-no-confirmation-needed": "Nincs szükség megerősítésre",
+	"multimail-emails-pager-primary-unconfirmed": "Elsődleges, nem megerősített",
+	"multimail-emails-pager-unconfirmed": "Nem megerősített",
+	"tooltip-multimail-emails-pager-delete-label": "E-mail cím törlése",
+	"multimail-special-add-email-view": "Új e-mail cím hozzáadása",
+	"multimail-special-add-email-view-new-email-label-message": "Új e-mail cím:",
+	"multimail-invalid-email": "Érvénytelen e-mail cím.",
+	"multimail-special-change-primary-view-confirmation": "Biztos meg akarod változtatni elsődleges e-mail címed erről: $1 erre: $2?",
+	"multimail-special-delete-view": "$1 törlése",
+	"multimail-special-delete-view-confirmation-submit-label-message": "E-mail cím törlése",
+	"multimail-special-request-confirmation-code-view-submit": "Megerősítő kód igénylése",
+	"multimail-needlogin": "A lap közvetlen eléréséhez be kell jelentkezned!",
+	"multimail-no-primary-email": "Elsődleges e-mail cím szükséges",
+	"multimail-manager-secondary-email-not-confirmed": "Hogy a másodlagos e-mail címet elsődlegessé tehesd, előbb meg kell erősítened!"
+}

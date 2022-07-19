@@ -20,6 +20,7 @@
 	"tooltip-multimail-special-add-email-view-submit": "新しいメールアドレスを追加する",
 	"multimail-special-add-email-view-confirmation-sent": "確認コードがあなたのメールアドレスに送信されました。",
 	"multimail-emails-confirm-success": "あなたのメールアドレスは既に確認されました。",
+	"multimail-special-delete-view": "$1 を削除",
 	"multimail-special-delete-view-confirmation-submit-label-message": "メールアドレスを削除する",
 	"tooltip-multimail-special-delete-view-confirmation-submit": "メールアドレスを削除する",
 	"multimail-special-request-confirmation-code-view-confirmation-email-sent": "新しい確認コードがあなたのメールアドレスに送信されました。",
