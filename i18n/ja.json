@@ -23,6 +23,8 @@
 	"multimail-special-delete-view": "$1 を削除",
 	"multimail-special-delete-view-confirmation-submit-label-message": "メールアドレスを削除する",
 	"tooltip-multimail-special-delete-view-confirmation-submit": "メールアドレスを削除する",
+	"multimail-special-request-confirmation-code-view-submit": "確認コードをリクエストする",
+	"tooltip-multimail-special-request-confirmation-code-view-submit": "確認コードをリクエストする",
 	"multimail-special-request-confirmation-code-view-confirmation-email-sent": "新しい確認コードがあなたのメールアドレスに送信されました。",
 	"multimail-email-disabled": "メールが無効になっています",
 	"multimail-manager-address-already-exists": "このメールアドレスはすでにこのアカウントにリンクされています。",
