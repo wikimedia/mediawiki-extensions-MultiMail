@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16"
+		]
+	},
+	"multimail-emails-pager-status": "Stato",
+	"multimail-emails-pager-no-confirmation-needed": "Nessuna conferma necessaria",
+	"multimail-special-add-email-view": "Aggiungi un nuovo indirizzo di posta elettronica",
+	"multimail-special-delete-view": "Cancella $1",
+	"multimail-needlogin": "Devi aver effettuato l'accesso per accedere a questa pagina direttamente.",
+	"multimail-manager-secondary-email-not-confirmed": "L'indirizzo email secondario deve essere confermato prima di poter diventare l'indirizzo email principale."
+}

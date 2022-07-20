@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kareyac"
+		]
+	},
+	"multimail-special-emailaddresses": "Էլփոստի հասցեներ",
+	"multimail-emails-pager-status": "Կարգավիճակ",
+	"multimail-emails-pager-no-confirmation-needed": "Հաստատման կարիք չկա",
+	"tooltip-multimail-emails-pager-delete-label": "Ջնջել այս էլփոստի հասցեն",
+	"multimail-special-add-email-view": "Ավելացնել նոր էլփոստի հասցե",
+	"multimail-special-delete-view": "Ջնջել $1",
+	"multimail-no-primary-email": "Պահանջվում է հիմնական էլփոստի հասցեն"
+}
