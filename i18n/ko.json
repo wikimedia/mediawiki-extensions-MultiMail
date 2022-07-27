@@ -8,6 +8,7 @@
 	"multimail-desc": "다중 이메일 주소 지원 추가",
 	"multimail-emails-add-email-button-label": "새 주소 추가",
 	"multimail-emails-pager-email": "이메일 주소",
+	"multimail-emails-pager-status": "상태",
 	"multimail-emails-pager-buttons": "관리",
 	"multimail-emails-pager-make-primary-button-label": "기본으로 설정",
 	"tooltip-multimail-emails-pager-make-primary-button-label": "이것을 기본 이메일 주소로 설정",
