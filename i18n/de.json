@@ -50,7 +50,7 @@
 	"multimail-no-primary-email": "Primäre E-Mail-Adresse erforderlich",
 	"multimail-no-primary-body": "Zur Nutzung dieser Spezialseite ist eine primäre E-Mail-Adresse erforderlich. Du kannst sie in deinen [[Special:Preferences#mw-prefsection-personal-email|Einstellungen]] einrichten.",
 	"multimail-email-disabled": "E-Mail ist deaktiviert",
-	"multimail-email-disabled-body": "MultiMail erfordert, dass die E-Mail-Funktionalität aktiviert ist, um zu funktionieren.",
+	"multimail-email-disabled-body": "MultiMail erfordert, dass die E-Mail-Funktion aktiviert ist, um zu funktionieren.",
 	"multimail-manager-primary-email-not-confirmed": "Die primäre E-Mail-Adresse muss bestätigt werden, bevor sie ersetzt werden kann.",
 	"multimail-manager-secondary-email-not-confirmed": "Die sekundäre E-Mail-Adresse muss bestätigt werden, bevor sie zur primären E-Mail-Adresse gemacht werden kann.",
 	"multimail-primary-swapped_subject": "Änderung der primären E-Mail-Adresse von {{SITENAME}}",
