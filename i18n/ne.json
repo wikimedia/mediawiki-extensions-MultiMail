@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bada Kaji"
+		]
+	},
+	"multimail-emails-pager-buttons": "व्यवस्थापन गर्नुहाेस्",
+	"multimail-emails-pager-confirm-button-label": "निश्चित गर्नुहोस्",
+	"multimail-special-delete-view": "$1 मेटाउनुहोस्",
+	"multimail-js-dialog-cancel": "रद्द गर्नुहोस्"
+}
