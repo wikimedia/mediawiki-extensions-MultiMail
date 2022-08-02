@@ -6,7 +6,7 @@
 		]
 	},
 	"multimail-special-emailaddresses": "电子邮件地址",
-	"multimail-special-emailaddresses-summary": "此页面列出了与此账户相关联的电子邮件地址。您将通过主电子邮件地址收到消息。您可以使用此特殊页面更改您的主电子邮件地址而无需重新确认，从而在您无法访问主电子邮件地址时恢复访问权限。",
+	"multimail-special-emailaddresses-summary": "此页面列出了与此账户相关联的电子邮件地址。您将通过主要电子邮件地址收到消息。您可以使用此特殊页面更改您的主要电子邮件地址而无需重新确认，从而在您无法访问主要电子邮件地址时恢复访问权限。",
 	"multimail-desc": "添加对多个电子邮件地址的支持",
 	"multimail-emails-add-email-button-label": "添加新地址",
 	"multimail-emails-pager-email": "电子邮件地址",
