@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"TayfunEt."
+		]
+	},
+	"multimail-emails-add-email-button-label": "Täze salgy goşuň",
+	"multimail-emails-pager-email": "E-poçta adresi:",
+	"multimail-emails-pager-status": "Status",
+	"multimail-emails-pager-make-primary-button-label": "Esasy et",
+	"tooltip-multimail-emails-pager-make-primary-button-label": "Esasy e-poçta salgysyny ediň",
+	"multimail-emails-pager-primary": "Başlangyç",
+	"multimail-emails-pager-no-confirmation-needed": "Tassyklama gerek däl",
+	"multimail-emails-pager-primary-unconfirmed": "Başlangyç, tassyklanmadyk",
+	"multimail-emails-pager-unconfirmed": "Tassyklanmady",
+	"tooltip-multimail-emails-pager-delete-label": "Bu e-poçta salgysyny pozuň",
+	"multimail-special-add-email-view": "Täze e-poçta salgysyny goşuň",
+	"multimail-special-add-email-view-new-email-label-message": "Täze e-poçta adresi:",
+	"multimail-invalid-email": "Bu dogry e-poçta salgysy däl.",
+	"multimail-special-delete-view-confirmation-submit-label-message": "E-poçta salgysyny pozuň",
+	"multimail-special-request-confirmation-code-view-submit": "Tassyklama kody soraň",
+	"tooltip-multimail-special-request-confirmation-code-view-submit": "Tassyklama kody soraň",
+	"multimail-needlogin": "Bu sahypa göni girmek üçin sessiýa açmaly.",
+	"multimail-no-primary-email": "Esasy e-poçta salgysy talap edilýär",
+	"multimail-manager-secondary-email-not-confirmed": "Ikinji e-poçta salgysy, esasy e-poçta salgysy edilmezden ozal tassyklanmalydyr.",
+	"multimail-manager-db-confirmation-code-add-fail": "Tassyklama koduny maglumat bazasynda saklap bilmedi.",
+	"apihelp-multimail-param-mail-action": "Ikinji e-poçta salgysy bilen edilmeli çäre."
+}

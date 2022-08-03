@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Verdy p"
+			"Verdy p",
+			"Wladek92"
 		]
 	},
 	"multimail-special-emailaddresses": "Adresses de courriel",
@@ -32,7 +33,7 @@
 	"multimail-special-add-email-view-submit-button-label-message": "Ajouter une nouvelle adresse de courriel",
 	"tooltip-multimail-special-add-email-view-submit": "Ajouter une nouvelle adresse de courriel",
 	"multimail-special-add-email-view-confirmation-sent": "Un code de confirmation a été envoyé à votre adresse de courriel.",
-	"multimail-special-change-primary-view-confirmation-submit-label-message": "Changer l’adresse de courriel principale ?",
+	"multimail-special-change-primary-view-confirmation-submit-label-message": "Changer l’adresse principale de courriel",
 	"tooltip-multimail-special-change-primary-view-confirmation-submit": "Changer l’adresse de courriel principale ?",
 	"multimail-special-change-primary-view-confirmation": "Êtes-vous sûr{{GENDER:||e}} de vouloir changer votre adresse de courriel principale de $1 en $2 ?",
 	"multimail-special-change-primary-view": "Changer l’adresse de courriel principale",
@@ -56,7 +57,7 @@
 	"multimail-manager-secondary-email-not-confirmed": "L’adresse de courriel secondaire doit être confirmée avant de pouvoir devenir l’adresse de courriel principale.",
 	"multimail-primary-swapped_subject": "Changement d’adresse de courriel principale sur {{SITENAME}}",
 	"multimail-primary-swapped_body": "Bonjour $1,\n\nCeci est un message automatisé pour vous informer que votre adresse de courriel principale sur {{SITENAME}} a été changée de $2 en $3 sur $4 depuis l’adresse IP $5. Si ce n'était pas vous, vous pouvez annuler ce changement en visitant $6.",
-	"multimail-confirmationmail-secondary_subject": "Changement d’adresse de courriel secondaire sur {{SITENAME}}",
+	"multimail-confirmationmail-secondary_subject": "Changement d’adresse secondaire de courriel sur {{SITENAME}}",
 	"multimail-confirmationmail-secondary_body": "Quelqu’un, probablement vous, connecté depuis l’adresse IP $1,\na ajouté cette adresse de courriel au compte « $2 » sur {{SITENAME}}.\n\nPour confirmer que ce compte vous appartient bien, ouvrez ce lien dans votre navigateur :\n\n $3 \n\nSi le compte ne vous appartient pas, vous pouvez ignorer ce courriel.\n\nCe code de confirmation expirera à $4.",
 	"multimail-manager-db-confirmation-code-add-fail": "Impossible de stocker le code de confirmation dans la base de données.",
 	"multimail-manager-db-save-old-primary-fail": "Impossible de stocker l’ancienne adresse de courriel dans la base de données.",
