@@ -67,5 +67,6 @@
 	"apihelp-multimail-summary": "[[Special:EmailAddresses]]의 자바스크립트용 API 모듈입니다.",
 	"apihelp-multimail-param-email": "이메일 주소입니다.",
 	"apihelp-multimail-param-id": "현재 사용자에게 속한 보조 이메일 주소의 ID입니다.",
-	"apihelp-multimail-param-mail-action": "보조 이메일 주소로 수행할 작업입니다."
+	"apihelp-multimail-param-mail-action": "보조 이메일 주소로 수행할 작업입니다.",
+	"apihelp-multimail-param-check-authentication-status": "사용자가 최근에 인증했는지 확인합니다."
 }

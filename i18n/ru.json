@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kareyac"
+		]
+	},
+	"multimail-emails-pager-status": "Статус",
+	"multimail-emails-pager-confirm-button-label": "Подтвердить",
+	"multimail-special-delete-view-confirmation": "Вы уверены, что хотите удалить адрес электронной почты $1?",
+	"multimail-js-dialog-cancel": "Отмена"
+}
