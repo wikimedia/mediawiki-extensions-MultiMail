@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"MathXplore"
+			"MathXplore",
+			"Sou0012"
 		]
 	},
 	"multimail-special-emailaddresses": "メールアドレス",
+	"multimail-emails-add-email-button-label": "新規アドレスの追加",
 	"multimail-emails-pager-email": "メールアドレス",
 	"multimail-emails-pager-status": "ステータス",
 	"multimail-emails-pager-buttons": "管理",
@@ -19,6 +21,8 @@
 	"multimail-special-add-email-view-submit-button-label-message": "新しいメールアドレスを追加する",
 	"tooltip-multimail-special-add-email-view-submit": "新しいメールアドレスを追加する",
 	"multimail-special-add-email-view-confirmation-sent": "確認コードがあなたのメールアドレスに送信されました。",
+	"tooltip-multimail-special-change-primary-view-confirmation-submit": "メールアドレスを変更",
+	"multimail-emails-confirm-invalid": "確認コードが無効です。\nコードの有効期限が切れている可能性があります。",
 	"multimail-emails-confirm-success": "あなたのメールアドレスは既に確認されました。",
 	"multimail-special-delete-view": "$1 を削除",
 	"multimail-special-delete-view-confirmation-submit-label-message": "メールアドレスを削除する",
@@ -26,7 +30,9 @@
 	"multimail-special-request-confirmation-code-view-submit": "確認コードをリクエストする",
 	"tooltip-multimail-special-request-confirmation-code-view-submit": "確認コードをリクエストする",
 	"multimail-special-request-confirmation-code-view-confirmation-email-sent": "新しい確認コードがあなたのメールアドレスに送信されました。",
+	"multimail-special-request-confirmation-code-view-confirmation-email-pending": "確認コードはすでにEメールで送信されています。\n最近このメールアドレスを追加した場合は、新しいコードを要求する前に、それが届くまで数分待つとよいでしょう。",
 	"multimail-email-disabled": "メールが無効になっています",
+	"multimail-manager-db-confirmation-code-add-fail": "確認コードをデータベースに保存できませんでした。",
 	"multimail-manager-address-already-exists": "このメールアドレスはすでにこのアカウントにリンクされています。",
 	"multimail-emails-invalid-id": "無効なメールアドレスです",
 	"multimail-emails-invalid-id-body": "選択したメールアドレスは有効なメールアドレスではありません。",
