@@ -5,8 +5,10 @@
 		]
 	},
 	"multimail-emails-add-email-button-label": "Lââʹzzet ođđ e-pååʹštaddrõõzz",
+	"multimail-emails-pager-email": "E-pååʹštaddrõs",
 	"multimail-special-add-email-view": "Lââʹzzet ođđ e-pååʹštaddrõõzz",
 	"multimail-special-add-email-view-submit-button-label-message": "Lââʹzzet ođđ e-pååʹštaddrõõzz",
 	"tooltip-multimail-special-add-email-view-submit": "Lââʹzzet ođđ e-pååʹštaddrõõzz",
-	"multimail-js-dialog-cancel": "Jõõsk"
+	"multimail-js-dialog-cancel": "Jõõsk",
+	"apihelp-multimail-param-email": "E-pååʹštaddrõs."
 }
