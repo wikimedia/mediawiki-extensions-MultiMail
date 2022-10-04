@@ -98,7 +98,7 @@ function main() {
 	} );
 
 	addEmailButton = OO.ui.infuse( $addEmailButton ).on( 'click', function () {
-		verifyAuthenticationStatus( 0, 'addEmail' );
+		verifyAuthenticationStatus( 0, 'addEmail', {} );
 	} );
 
 	if ( activeForm === 0 ) {
