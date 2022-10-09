@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\MultiMail\HTMLForm\Fields;
 
 use HTMLFormField;
+use InvalidArgumentException;
 use Message;
 use MessageSpecifier;
 use MWException;
@@ -56,11 +57,16 @@ class HTMLMessageField extends HTMLFormField {
 
 		$info['nodata'] = true;
 
+		if ( !$this->message ) {
+			throw new InvalidArgumentException( 'The "message" field is required!' );
+		}
+
 		parent::__construct( $info );
 	}
 
 	/** @inheritDoc */
 	public function getDefault(): string {
+		// @phan-suppress-next-line PhanParamTooFewUnpack
 		return $this->msg( ...$this->message )
 			->toString( $this->parse ? Message::FORMAT_PARSE : Message::FORMAT_ESCAPED );
 	}
