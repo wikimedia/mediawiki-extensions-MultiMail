@@ -9,7 +9,6 @@ use MessageSpecifier;
 use MWException;
 use OOUI\HtmlSnippet;
 use OOUI\MessageWidget;
-use function is_object;
 
 /**
  * HTMLFormField that shows the OOUI MessageWidget
@@ -28,6 +27,7 @@ class HTMLMessageField extends HTMLFormField {
 	 * Message to use in the message box.
 	 *
 	 * @var string[]|array[]|MessageSpecifier[]
+	 * @phan-var non-empty-array<string|array|MessageSpecifier>
 	 */
 	private $message;
 
@@ -52,21 +52,22 @@ class HTMLMessageField extends HTMLFormField {
 	 */
 	public function __construct( array $info ) {
 		$this->type = $info['messagetype'] ?? 'notice';
-		$this->message = is_object( $info['message'] ) ? [ $info['message'] ] : (array)$info['message'];
+		if ( $info['message'] instanceof MessageSpecifier || is_string( $info['message'] ) ) {
+			$this->message = [ $info['message'] ];
+		} elseif ( is_array( $info['message'] ) && $info['message'] ) {
+			$this->message = $info['message'];
+		} else {
+			throw new InvalidArgumentException( 'Invalid "message" field.' );
+		}
 		$this->parse = $info['parse'] ?? false;
 
 		$info['nodata'] = true;
-
-		if ( !$this->message ) {
-			throw new InvalidArgumentException( 'The "message" field is required!' );
-		}
-
 		parent::__construct( $info );
 	}
 
 	/** @inheritDoc */
 	public function getDefault(): string {
-		// @phan-suppress-next-line PhanParamTooFewUnpack
+		// @phan-suppress-next-line PhanParamTooFewUnpack Should infer non-emptiness from docblock
 		return $this->msg( ...$this->message )
 			->toString( $this->parse ? Message::FORMAT_PARSE : Message::FORMAT_ESCAPED );
 	}
