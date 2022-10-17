@@ -4,6 +4,7 @@
 			"Eleassar"
 		]
 	},
+	"multimail-needlogin": "Za neposreden dostop do te strani morate biti prijavljeni.",
 	"multimail-email-disabled": "E-pošta je onemogočena",
 	"multimail-email-disabled-body": "Za delovanje razširitve MultiMail mora biti omogočena uporaba e-pošte."
 }
