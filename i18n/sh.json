@@ -11,6 +11,8 @@
 	"multimail-emails-pager-email": "Adresa e-pošte",
 	"multimail-emails-pager-status": "Status",
 	"multimail-emails-pager-buttons": "Upravljaj",
+	"multimail-emails-pager-confirm-button-label": "Potvrdi",
+	"tooltip-multimail-emails-pager-confirm-button-label": "Provjerite status potvrde ove adrese e-pošte",
 	"multimail-special-request-confirmation-code-view-confirmation-email-sent": "Biti će poslan novi potvrdni kod na vašu adresu e-pošte.",
 	"multimail-special-request-confirmation-code-view-confirmation-email-pending": "Kod za potvrdu već vam je poslan e-poštom; ako ste nedavno dodali ovu adresu e-pošte, možda ćete htjeti pričekati par minuta da stigne prije nego što pokušate zatražiti novi kod.",
 	"multimail-needlogin": "Morate biti prijavljeni da biste izravno pristupili ovoj stranici.",
