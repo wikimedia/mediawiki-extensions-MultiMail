@@ -403,7 +403,6 @@ class MailManager {
 		}
 
 		$dbw = $this->getMailDb( DB_PRIMARY );
-		$timestamp = $dbw->timestamp();
 
 		$row = $dbw->selectRow(
 			'user_secondary_email',
@@ -418,7 +417,7 @@ class MailManager {
 				'use_id' => $id,
 				'use_cuid' => $centralId,
 				'use_email_authenticated' => null,
-				'use_email_token_expires > ' . $dbw->addQuotes( $timestamp ),
+				$dbw->buildComparison( '>', [ 'use_email_token_expires' => $dbw->timestamp() ] ),
 				'use_email_token' => md5( $token )
 			],
 			__METHOD__
