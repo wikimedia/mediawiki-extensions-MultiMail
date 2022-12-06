@@ -5,7 +5,7 @@
 		]
 	},
 	"multimail-special-emailaddresses": "Email addresses",
-	"multimail-special-emailaddresses-summary": "This page lists your email addresses that are linked with this account. Your will receive messages on your primary email address. You can use this special page to change your primary email address without needing to reconfirm, allowing you to restore access if you have lost access to your primary email address.",
+	"multimail-special-emailaddresses-summary": "This page lists your email addresses that are linked with this account. You will receive messages on your primary email address. You can use this special page to change your primary email address without needing to reconfirm, allowing you to restore access if you have lost access to your primary email address.",
 	"multimail-desc": "Adds support for multiple email addresses",
 	"multimail-extensionname": "MultiMail",
 	"multimail-emails-add-email-button-label": "Add a new address",
