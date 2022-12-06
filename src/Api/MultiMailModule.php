@@ -50,7 +50,7 @@ class MultiMailModule extends ApiBase {
 		$params = $this->extractRequestParams();
 
 		if ( $params['check-authentication-status'] ) {
-			$status = $this->authManager->securitySensitiveOperationStatus( 'ChangEmail' );
+			$status = $this->authManager->securitySensitiveOperationStatus( 'ChangeEmail' );
 
 			if ( $status !== AuthManager::SEC_FAIL ) {
 				$this->getResult()->addValue( null, $this->getModuleName(), [ 'status' => $status ] );
