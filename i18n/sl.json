@@ -4,6 +4,7 @@
 			"Eleassar"
 		]
 	},
+	"multimail-special-emailaddresses-summary": "Na tej strani so navedeni vaši e-poštni naslovi, ki so povezani s tem računom. Sporočila boste prejemali na svoj primarni e-poštni naslov. To posebno stran lahko uporabite za spremembo primarnega e-poštnega naslova, ne da bi ga morali znova potrditi, kar vam omogoča obnovitev dostopa, če ste izgubili dostop do svojega primarnega e-poštnega naslova.",
 	"multimail-needlogin": "Za neposreden dostop do te strani morate biti prijavljeni.",
 	"multimail-email-disabled": "E-pošta je onemogočena",
 	"multimail-email-disabled-body": "Za delovanje razširitve MultiMail mora biti omogočena uporaba e-pošte."
