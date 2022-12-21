@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kly"
+			"Kly",
+			"捍粵者"
 		]
 	},
 	"multimail-special-emailaddresses": "電子郵件地址",
@@ -51,7 +52,7 @@
 	"multimail-no-primary-body": "使用此特殊頁面必須要有主要電子郵件地址。您可以[[Special:Preferences#mw-prefsection-personal-email|在您的偏好設定中]]進行設定。",
 	"multimail-email-disabled": "已停用電子郵件",
 	"multimail-email-disabled-body": "MultiMail 要求需啟用電子郵件功能才能正常運作。",
-	"multimail-manager-primary-email-not-confirmed": "需先確認主要電子郵件地址，才能進行替換。",
+	"multimail-manager-primary-email-not-confirmed": "確認主要電郵地址後才能變更。",
 	"multimail-manager-secondary-email-not-confirmed": "需先確認次要電子郵件地址，才能將其設為主要電子郵件地址。",
 	"multimail-primary-swapped_subject": "{{SITENAME}}主要電子郵件地址更改",
 	"multimail-primary-swapped_body": "$1 您好：\n\n這是一封自動發送訊息，來通知您在 {{SITENAME}} 上的主要電子郵件地址已從 $2 更改成 $3（於 $4，出自 IP 地址 $5）。若這是非您本人的操作，您可以透過訪問 $6 來撤銷此變更。",
