@@ -6,5 +6,6 @@
 	},
 	"multimail-needlogin": "Za neposreden dostop do te strani morate biti prijavljeni.",
 	"multimail-email-disabled": "E-pošta je onemogočena",
-	"multimail-email-disabled-body": "Za delovanje razširitve MultiMail mora biti omogočena uporaba e-pošte."
+	"multimail-email-disabled-body": "Za delovanje razširitve MultiMail mora biti omogočena uporaba e-pošte.",
+	"multimail-manager-db-confirmation-code-add-fail": "Potrditvene kode ni bilo mogoče shraniti v zbirko podatkov."
 }
