@@ -8,6 +8,7 @@
 	"multimail-emails-pager-delete-label": "Siho dán e-poastačujuhusa",
 	"tooltip-multimail-emails-pager-delete-label": "Siho dán e-poastačujuhusa",
 	"multimail-special-add-email-view-new-email-label-message": "Ođđa e-poastačujuhus:",
+	"multimail-special-delete-view": "Sihko $1",
 	"multimail-special-delete-view-confirmation-submit-label-message": "Siho e-poastačujuhusa",
 	"tooltip-multimail-special-delete-view-confirmation-submit": "Siho e-poastačujuhusa",
 	"apihelp-multimail-param-email": "E-poastačujuhus."
