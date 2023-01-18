@@ -5,5 +5,11 @@
 		]
 	},
 	"multimail-emails-pager-email": "Šleđgâpostâčujottâs",
+	"multimail-special-add-email-view": "Lasseet uđđâ šleđgâpostâčujottâs",
+	"multimail-special-add-email-view-new-email-label-message": "Uđđâ šleđgâpostâčujottâs:",
+	"multimail-special-add-email-view-submit-button-label-message": "Lasseet uđđâ šleđgâpostâčujottâs",
+	"tooltip-multimail-special-add-email-view-submit": "Lasseet uđđâ šleđgâpostâčujottâs",
+	"multimail-special-delete-view-confirmation-submit-label-message": "Siho šleđgâpostâčujottâs",
+	"tooltip-multimail-special-delete-view-confirmation-submit": "Siho šleđgâpostâčujottâs",
 	"apihelp-multimail-param-email": "Šleđgâpostâčujottâs."
 }
