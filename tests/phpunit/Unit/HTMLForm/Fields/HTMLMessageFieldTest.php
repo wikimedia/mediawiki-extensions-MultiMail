@@ -2,6 +2,7 @@
 
 namespace MediaWiki\Extension\MultiMail\Tests\Unit\HTMLForm\Fields;
 
+use HTMLForm;
 use MediaWiki\Extension\MultiMail\HTMLForm\Fields\HTMLMessageField;
 use MediaWikiUnitTestCase;
 use Message;
@@ -16,7 +17,8 @@ class HTMLMessageFieldTest extends MediaWikiUnitTestCase {
 	public function testMessageIsEscaped(): void {
 		$config = [
 			'fieldname' => 'test',
-			'message' => ''
+			'message' => '',
+			'parent' => $this->createMock( HTMLForm::class )
 		];
 		$mockMessage = $this->createMock( Message::class );
 		$mockMessage
@@ -51,7 +53,8 @@ class HTMLMessageFieldTest extends MediaWikiUnitTestCase {
 		$config = [
 			'fieldname' => 'test',
 			'message' => '',
-			'parse' => true
+			'parse' => true,
+			'parent' => $this->createMock( HTMLForm::class )
 		];
 		$mockMessage = $this->createMock( Message::class );
 		$mockMessage
@@ -89,9 +92,10 @@ class HTMLMessageFieldTest extends MediaWikiUnitTestCase {
 	 */
 	public function testGetInputOOUI( array $config, array $expected ): void {
 		$field = new HTMLMessageField( $config + [
-				'fieldname' => 'test',
-				'message' => ''
-			] );
+			'fieldname' => 'test',
+			'message' => '',
+			'parent' => $this->createMock( HTMLForm::class )
+		] );
 
 		$widget = $field->getInputOOUI( '' );
 		$config = [];
