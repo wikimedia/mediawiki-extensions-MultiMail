@@ -57,7 +57,7 @@
 	"multimail-primary-swapped_body": "Pozdravljeni, $1,\n\nto je samodejno sporočilo, ki vas obvešča, da je bil vaš primarni e-poštni naslov v projektu {{SITENAME}} $4 z nadlova $5 spremenjen iz $2 v $3. Če to niste bili vi, lahko to spremembo razveljavite tako, da obiščete $6.",
 	"multimail-confirmationmail-secondary_subject": "Potrditev sekundarnega e-poštnega naslova v projektu {{SITENAME}}",
 	"multimail-confirmationmail-secondary_body": "Nekdo, verjetno vi, je z IP-naslova $1\nv projektu {{SITENAME}} dodal ta e-poštni naslov v račun »$2«.\n\nČe želite potrditi, da ta račun res pripada vam, v svojem brskalniku odprite to povezavo:\n\n$3 \n\nČe račun ne pripada vam, lahko to e-pismo prezrete.\n\nTa potrditvena koda poteče $4.",
-	"multimail-manager-db-confirmation-code-add-fail": "Potrditvene kode ni bilo mogoče shraniti v zbirko podatkov.",
+	"multimail-manager-db-confirmation-code-add-fail": "Potrditvene kode ni bilo mogoče shraniti v podatkovno zbirko.",
 	"multimail-manager-db-save-old-primary-fail": "Potrditvene kode ni bilo mogoče shraniti v podatkovno zbirko.",
 	"multimail-manager-address-already-exists": "Ta e-poštni naslov je že povezan s tem računom.",
 	"multimail-manager-db-add-new-secondary-fail": "Novega e-poštnega naslova ni bilo mogoče shraniti v podatkovno zbirko.",
