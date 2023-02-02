@@ -11,8 +11,7 @@ use OOUI\ButtonWidget;
 use const DB_REPLICA;
 
 class EmailsView extends View {
-	/** @var CentralIdLookup */
-	private $centralIdLookup;
+	private CentralIdLookup $centralIdLookup;
 
 	/**
 	 * @codeCoverageIgnore

@@ -11,6 +11,7 @@ use MediaWiki\Extension\MultiMail\Mail\SecondaryEmail;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Mail\IEmailer;
 use MediaWikiUnitTestCase;
+use Title;
 use TitleFactory;
 use User;
 use Wikimedia\Rdbms\IDatabase;
@@ -22,6 +23,16 @@ use const DB_REPLICA;
  * @covers \MediaWiki\Extension\MultiMail\Mail\MailManager
  */
 class MailManagerTest extends MediaWikiUnitTestCase {
+	private function getTitleFactory(): TitleFactory {
+		$title = $this->createMock( Title::class );
+		$title->method( 'getSubpage' )->willReturn( $title );
+
+		$titleFactory = $this->createMock( TitleFactory::class );
+		$titleFactory->method( 'makeTitle' )->willReturn( $title );
+
+		return $titleFactory;
+	}
+
 	public function testGetMailDb(): void {
 		$db = $this->createNoOpMock( IDatabase::class );
 
@@ -32,7 +43,7 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 			$lb,
 			$this->createNoOpMock( CentralIdLookup::class ),
 			$this->createNoOpMock( IEmailer::class ),
-			$this->createMock( TitleFactory::class ),
+			$this->getTitleFactory(),
 			$this->createNoOpMock( HookContainer::class ),
 			'mailDbName',
 			false,
@@ -47,7 +58,7 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 			$this->createNoOpMock( ILoadBalancer::class ),
 			$this->createNoOpMock( CentralIdLookup::class ),
 			$this->createNoOpMock( IEmailer::class ),
-			$this->createMock( TitleFactory::class ),
+			$this->getTitleFactory(),
 			$this->createNoOpMock( HookContainer::class ),
 			false,
 			false,
@@ -78,7 +89,7 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 			$this->createNoOpMock( ILoadBalancer::class ),
 			$this->createNoOpMock( CentralIdLookup::class ),
 			$this->createNoOpMock( IEmailer::class ),
-			$this->createMock( TitleFactory::class ),
+			$this->getTitleFactory(),
 			$this->createNoOpMock( HookContainer::class ),
 			false,
 			false,
@@ -98,7 +109,7 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 			$this->createNoOpMock( ILoadBalancer::class ),
 			$this->createNoOpMock( CentralIdLookup::class ),
 			$this->createNoOpMock( IEmailer::class ),
-			$this->createMock( TitleFactory::class ),
+			$this->getTitleFactory(),
 			$this->createNoOpMock( HookContainer::class ),
 			false,
 			true,
@@ -121,7 +132,7 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 			$this->createNoOpMock( ILoadBalancer::class ),
 			$this->createNoOpMock( CentralIdLookup::class ),
 			$this->createNoOpMock( IEmailer::class ),
-			$this->createMock( TitleFactory::class ),
+			$this->getTitleFactory(),
 			$this->createNoOpMock( HookContainer::class ),
 			false,
 			true,
@@ -152,7 +163,7 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 			$this->createNoOpMock( ILoadBalancer::class ),
 			$this->createNoOpMock( CentralIdLookup::class ),
 			$this->createNoOpMock( IEmailer::class ),
-			$this->createMock( TitleFactory::class ),
+			$this->getTitleFactory(),
 			$this->createNoOpMock( HookContainer::class ),
 			false,
 			false,

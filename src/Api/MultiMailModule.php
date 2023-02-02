@@ -12,11 +12,9 @@ use Wikimedia\ParamValidator\TypeDef\NumericDef;
 use Wikimedia\ParamValidator\TypeDef\StringDef;
 
 class MultiMailModule extends ApiBase {
-	/** @var MailManager */
-	private $mailManager;
+	private MailManager $mailManager;
 
-	/** @var AuthManager */
-	private $authManager;
+	private AuthManager $authManager;
 
 	/**
 	 * @codeCoverageIgnore

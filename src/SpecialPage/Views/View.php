@@ -17,11 +17,9 @@ use WebRequest;
  * @codeCoverageIgnore
  */
 abstract class View {
-	/** @var SpecialEmailAddresses */
-	private $parent;
+	private SpecialEmailAddresses $parent;
 
-	/** @var MailManager */
-	protected $mailManager;
+	protected MailManager $mailManager;
 
 	/**
 	 * @param SpecialEmailAddresses $parent

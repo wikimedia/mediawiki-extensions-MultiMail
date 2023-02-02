@@ -11,11 +11,9 @@ abstract class ConfirmationView extends FormView {
 	protected const AUTHENTICATED_ONLY = true;
 	protected const AUTHENTICATED_BOTH = null;
 
-	/** @var int */
-	protected $id;
+	protected int $id;
 
-	/** @var SecondaryEmail */
-	protected $secondaryEmail;
+	protected SecondaryEmail $secondaryEmail;
 
 	/** @inheritDoc */
 	public function show( ?string $subpage ): void {

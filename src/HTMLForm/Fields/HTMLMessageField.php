@@ -21,7 +21,7 @@ class HTMLMessageField extends HTMLFormField {
 	 *
 	 * @var string
 	 */
-	private $type;
+	private string $type;
 
 	/**
 	 * Message to use in the message box.
@@ -29,7 +29,7 @@ class HTMLMessageField extends HTMLFormField {
 	 * @var string[]|array[]|MessageSpecifier[]
 	 * @phan-var non-empty-array<string|array|MessageSpecifier>
 	 */
-	private $message;
+	private array $message;
 
 	/**
 	 * If the message should be parsed as wikitext.
@@ -37,7 +37,7 @@ class HTMLMessageField extends HTMLFormField {
 	 *
 	 * @var bool
 	 */
-	private $parse;
+	private bool $parse;
 
 	/**
 	 * @param array $info

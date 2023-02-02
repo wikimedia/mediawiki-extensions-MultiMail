@@ -8,11 +8,9 @@ use MediaWiki\User\Hook\ConfirmEmailCompleteHook;
 use Sanitizer;
 
 class EmailHandler implements ConfirmEmailCompleteHook, PrefsEmailAuditHook {
-	/** @var bool */
-	private static $isCalledFromMultiMail = false;
+	private static bool $isCalledFromMultiMail = false;
 
-	/** @var MailManager */
-	private $mailManager;
+	private MailManager $mailManager;
 
 	/**
 	 * @codeCoverageIgnore

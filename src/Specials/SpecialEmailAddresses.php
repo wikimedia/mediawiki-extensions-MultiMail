@@ -19,11 +19,9 @@ use function str_starts_with;
 use function substr_count;
 
 class SpecialEmailAddresses extends SpecialPage {
-	/** @var MailManager */
-	private $mailManager;
+	private MailManager $mailManager;
 
-	/** @var CentralIdLookup */
-	private $centralIdLookup;
+	private CentralIdLookup $centralIdLookup;
 
 	/**
 	 * @param AuthManager $authManager

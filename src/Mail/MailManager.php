@@ -26,32 +26,24 @@ use const DB_PRIMARY;
 use const DB_REPLICA;
 
 class MailManager {
-	/** @var ILoadBalancer */
-	private $lb;
+	private ILoadBalancer $lb;
 
-	/** @var CentralIdLookup */
-	private $centralIdLookup;
+	private CentralIdLookup $centralIdLookup;
 
-	/** @var IEmailer */
-	private $emailer;
+	private IEmailer $emailer;
 
-	/** @var HookRunner */
-	private $hookRunner;
+	private HookRunner $hookRunner;
 
 	/** @var false|string */
 	private $mailDb;
 
-	/** @var bool */
-	private $emailAuthentication;
+	private bool $emailAuthentication;
 
-	/** @var int */
-	private $userEmailConfirmationTokenExpiry;
+	private int $userEmailConfirmationTokenExpiry;
 
-	/** @var Title */
-	private $emailConfirmTitle;
+	private Title $emailConfirmTitle;
 
-	/** @var Title|null */
-	private $emailUndoTitle;
+	private Title $emailUndoTitle;
 
 	/**
 	 * @param ILoadBalancer $lb
@@ -81,7 +73,7 @@ class MailManager {
 		$this->emailAuthentication = $emailAuthentication;
 		$this->userEmailConfirmationTokenExpiry = $userEmailConfirmationTokenExpiry;
 
-		$title = $titleFactory->makeTitle( NS_MAIN, 'Special:EmailAddresses' );
+		$title = $titleFactory->makeTitle( NS_SPECIAL, 'EmailAddresses' );
 
 		$this->emailConfirmTitle = $title->getSubpage( 'confirm' );
 		$this->emailUndoTitle = $title->getSubpage( 'primary' );

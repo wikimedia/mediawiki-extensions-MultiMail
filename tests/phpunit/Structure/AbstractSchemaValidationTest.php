@@ -15,7 +15,7 @@ class AbstractSchemaValidationTest extends TestCase {
 	use MediaWikiCoversValidator;
 
 	/** @var AbstractSchemaValidator */
-	protected $validator;
+	protected AbstractSchemaValidator $validator;
 
 	/** @inheritDoc */
 	protected function setUp(): void {

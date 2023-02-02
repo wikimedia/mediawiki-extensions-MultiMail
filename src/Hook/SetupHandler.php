@@ -17,7 +17,7 @@ class SetupHandler implements
 	/**
 	 * @var bool Indicates if the handler is run in the installer.
 	 */
-	private $isInstaller;
+	private bool $isInstaller;
 
 	/**
 	 * For tests only!

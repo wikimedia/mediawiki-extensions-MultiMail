@@ -16,14 +16,11 @@ use function htmlspecialchars;
 use function iterator_to_array;
 
 class EmailsPager extends TablePager {
-	/** @var CentralIdLookup */
-	private $centralIdLookup;
+	private CentralIdLookup $centralIdLookup;
 
-	/** @var bool */
-	private $emailAuthentication;
+	private bool $emailAuthentication;
 
-	/** @var int */
-	private $buttonCounter;
+	private int $buttonCounter;
 
 	/**
 	 * @param IContextSource $context

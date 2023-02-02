@@ -10,11 +10,9 @@ use function strlen;
 use function substr;
 
 class AddEmailView extends FormView {
-	/** @var bool */
-	private $emailRequiresConfirming;
+	private bool $emailRequiresConfirming;
 
-	/** @var string */
-	private $prefill;
+	private string $prefill;
 
 	/** @inheritDoc */
 	public function beforeForm( ?string $subpage ): void {

@@ -13,29 +13,21 @@ use function wfTimestamp;
 use const TS_MW;
 
 class SecondaryEmail implements UserEmailContact {
-	/** @var User */
-	private $user;
+	private User $user;
 
-	/** @var int */
-	private $id;
+	private int $id;
 
-	/** @var string */
-	private $emailAddress;
+	private string $emailAddress;
 
-	/** @var string|null */
-	private $emailAuthenticationTimestamp;
+	private ?string $emailAuthenticationTimestamp;
 
-	/** @var string|null */
-	private $emailToken;
+	private ?string $emailToken;
 
-	/** @var string|null */
-	private $emailTokenExpires;
+	private ?string $emailTokenExpires;
 
-	/** @var bool */
-	private $emailAuthenticationEnabled;
+	private bool $emailAuthenticationEnabled;
 
-	/** @var int */
-	private $userEmailConfirmationTokenExpiry;
+	private int $userEmailConfirmationTokenExpiry;
 
 	/**
 	 * Creates a new secondary email address.

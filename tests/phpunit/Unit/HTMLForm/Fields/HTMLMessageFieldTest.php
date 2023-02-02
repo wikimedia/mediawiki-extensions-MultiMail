@@ -28,8 +28,7 @@ class HTMLMessageFieldTest extends MediaWikiUnitTestCase {
 			->willReturn( '' );
 
 		$field = new class( $config, $mockMessage ) extends HTMLMessageField {
-			/** @var Message */
-			private $mockMessage;
+			private Message $mockMessage;
 
 			public function __construct( array $info, Message $mockMessage ) {
 				parent::__construct( $info );
@@ -64,8 +63,7 @@ class HTMLMessageFieldTest extends MediaWikiUnitTestCase {
 			->willReturn( '' );
 
 		$field = new class( $config, $mockMessage ) extends HTMLMessageField {
-			/** @var Message */
-			private $mockMessage;
+			private Message $mockMessage;
 
 			public function __construct( array $info, Message $mockMessage ) {
 				parent::__construct( $info );
