@@ -116,15 +116,15 @@ class MailManager {
 		list( $token, $expiration, $hashedToken ) = $email->generateNewConfirmationToken();
 
 		$dbw = $this->getMailDb( DB_PRIMARY );
-		$dbw->update(
-			'user_secondary_email',
-			[
+		$dbw->newUpdateQueryBuilder()
+			->update( 'user_secondary_email' )
+			->set( [
 				'use_email_token' => $hashedToken,
 				'use_email_token_expires' => $dbw->timestamp( $expiration )
-			],
-			[ 'use_id' => $email->getId() ],
-			__METHOD__
-		);
+			] )
+			->where( [ 'use_id' => $email->getId() ] )
+			->caller( __METHOD__ )
+			->execute();
 
 		if ( $dbw->affectedRows() === 0 ) {
 			return Status::newFatal( 'multimail-manager-db-confirmation-code-add-fail' );
@@ -220,15 +220,15 @@ class MailManager {
 
 		$dbw = $this->getMailDb( DB_PRIMARY );
 
-		$existingEntry = $dbw->selectField(
-			'user_secondary_email',
-			'use_id',
-			[
+		$existingEntry = $dbw->newSelectQueryBuilder()
+			->select( 'use_id' )
+			->from( 'user_secondary_email' )
+			->where( [
 				'use_cuid' => $centralId,
 				'use_email' => $user->getEmail()
-			],
-			__METHOD__
-		);
+			] )
+			->caller( __METHOD__ )
+			->fetchField();
 
 		$set = [
 			'use_email' => $user->getEmail(),
@@ -236,12 +236,12 @@ class MailManager {
 		];
 
 		if ( $existingEntry ) {
-			$dbw->update(
-				'user_secondary_email',
-				$set,
-				[ 'use_id' => $existingEntry ],
-				__METHOD__
-			);
+			$dbw->newUpdateQueryBuilder()
+				->update( 'user_secondary_email' )
+				->set( $set )
+				->where( [ 'use_id' => $existingEntry ] )
+				->caller( __METHOD__ )
+				->execute();
 		} else {
 			$dbw->insert(
 				'user_secondary_email',
@@ -395,25 +395,24 @@ class MailManager {
 		}
 
 		$dbw = $this->getMailDb( DB_PRIMARY );
-
-		$row = $dbw->selectRow(
-			'user_secondary_email',
-			[
+		$row = $dbw->newSelectQueryBuilder()
+			->select( [
 				'use_id',
 				'use_email',
 				'use_email_authenticated',
 				'use_email_token',
 				'use_email_token_expires'
-			],
-			[
+			] )
+			->from( 'user_secondary_email' )
+			->where( [
 				'use_id' => $id,
 				'use_cuid' => $centralId,
 				'use_email_authenticated' => null,
 				$dbw->buildComparison( '>', [ 'use_email_token_expires' => $dbw->timestamp() ] ),
 				'use_email_token' => md5( $token )
-			],
-			__METHOD__
-		);
+			] )
+			->caller( __METHOD__ )
+			->fetchRow();
 
 		if ( !$row ) {
 			return false;
@@ -433,13 +432,12 @@ class MailManager {
 	 */
 	public function updateAuthenticationStatus( SecondaryEmail $email, ?string $newValue ): bool {
 		$dbw = $this->getMailDb( DB_PRIMARY );
-
-		$dbw->update(
-			'user_secondary_email',
-			[ 'use_email_authenticated' => $dbw->timestampOrNull( $newValue ) ],
-			[ 'use_id' => $email->getId() ],
-			__METHOD__
-		);
+		$dbw->newUpdateQueryBuilder()
+			->update( 'user_secondary_email' )
+			->set( [ 'use_email_authenticated' => $dbw->timestampOrNull( $newValue ) ] )
+			->where( [ 'use_id' => $email->getId() ] )
+			->caller( __METHOD__ )
+			->execute();
 
 		return $dbw->affectedRows() > 0;
 	}
@@ -490,18 +488,19 @@ class MailManager {
 			throw new InvalidArgumentException( 'Cannot select secondary email for unattached user!' );
 		}
 
-		$row = $this->getMailDb( DB_REPLICA )->selectRow(
-			'user_secondary_email',
-			[
+		$queryBuilder = $this->getMailDb( DB_REPLICA )->newSelectQueryBuilder()
+			->select( [
 				'use_id',
 				'use_email',
 				'use_email_authenticated',
 				'use_email_token',
 				'use_email_token_expires'
-			],
-			[ 'use_cuid' => $centralId ] + $condition,
-			__METHOD__
-		);
+			] )
+			->from( 'user_secondary_email' )
+			->where( [ 'use_cuid' => $centralId ] + $condition )
+			->caller( __METHOD__ );
+
+		$row = $queryBuilder->fetchRow();
 
 		if ( !$row ) {
 			return null;

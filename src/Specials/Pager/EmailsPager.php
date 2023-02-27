@@ -48,23 +48,19 @@ class EmailsPager extends TablePager {
 
 	/** @inheritDoc */
 	public function getQueryInfo(): array {
-		return [
-			'tables' => [
-				'user_secondary_email'
-			],
-			'fields' => [
+		return $this->mDb->newSelectQueryBuilder()
+			->select( [
 				'use_id',
 				'use_email',
 				'use_email_authenticated'
-			],
-			'conds' => [
+			] )
+			->from( 'user_secondary_email' )
+			->where( [
 				'use_cuid' => $this->centralIdLookup->centralIdFromLocalUser( $this->getUser() ),
-				// Primary email is added below.
+				// Primary email is added below in ::reallyDoQuery.
 				'use_email != ' . $this->mDb->addQuotes( $this->getUser()->getEmail() )
-			],
-			'options' => [],
-			'join_conds' => []
-		];
+			] )
+			->getQueryInfo();
 	}
 
 	/** @inheritDoc */
