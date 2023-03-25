@@ -150,7 +150,7 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 	 *
 	 * @return array
 	 */
-	public function provideInvalidTokens(): array {
+	public static function provideInvalidTokens(): array {
 		return [
 			'Empty' => [ '' ],
 			'Too short' => [ 'fff' ],

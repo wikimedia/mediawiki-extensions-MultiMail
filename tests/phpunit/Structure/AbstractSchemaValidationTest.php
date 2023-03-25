@@ -41,7 +41,7 @@ class AbstractSchemaValidationTest extends TestCase {
 	 *
 	 * @return array
 	 */
-	public function provideTestables(): array {
+	public static function provideTestables(): array {
 		return [
 			'tables.json' => [ __DIR__ . '/../../../sql/tables.json' ]
 		];

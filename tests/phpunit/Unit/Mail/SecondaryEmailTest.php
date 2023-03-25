@@ -75,7 +75,7 @@ class SecondaryEmailTest extends MediaWikiUnitTestCase {
 	 *
 	 * @return array
 	 */
-	public function provideEmailConfirmed(): array {
+	public static function provideEmailConfirmed(): array {
 		return [
 			'EmailAuthenticationEnabled => false, with timestamp' => [
 				wfTimestampNow(),
@@ -135,7 +135,7 @@ class SecondaryEmailTest extends MediaWikiUnitTestCase {
 	 *
 	 * @return array
 	 */
-	public function provideEmailConfirmationPending(): array {
+	public static function provideEmailConfirmationPending(): array {
 		return [
 			'Confirmed, no token' => [
 				true,

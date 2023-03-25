@@ -107,7 +107,7 @@ class HTMLMessageFieldTest extends MediaWikiUnitTestCase {
 	 *
 	 * @return array
 	 */
-	public function provideConfig(): array {
+	public static function provideConfig(): array {
 		return [
 			'No type specified' => [
 				[],
