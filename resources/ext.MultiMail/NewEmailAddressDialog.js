@@ -66,14 +66,14 @@ NewEmailAddressDialog.prototype.onEmailInputChange = function ( value ) {
 };
 
 NewEmailAddressDialog.prototype.getActionProcess = function ( action ) {
-	var dialog = this,
-		api = new mw.Api(),
-		actionWidget = dialog.getActions().get( { actions: 'add' } )[ 0 ],
-		dfd = new $.Deferred();
-
 	if ( action !== 'add' ) {
 		return NewEmailAddressDialog.super.prototype.getActionProcess.call( this, action );
 	}
+
+	const dialog = this;
+	const api = new mw.Api();
+	const actionWidget = dialog.getActions().get( { actions: 'add' } )[ 0 ];
+	const dfd = new $.Deferred();
 
 	actionWidget.pushPending();
 	dialog.pushPending();

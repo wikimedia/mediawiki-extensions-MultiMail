@@ -1,23 +1,23 @@
 'use strict';
 
 function main() {
-	var NewEmailAddressDialog = require( './NewEmailAddressDialog.js' ),
-		ConfirmActionDialog = require( './ConfirmActionDialog.js' ),
-		ReauthenticationRequestDialog = require( './ReauthenticationRequestDialog.js' ),
-		config = require( './config.json' ),
-		windowManager = new OO.ui.WindowManager(),
-		$addEmailButton = $( '#ext-multimail-new-email' ),
-		api = new mw.Api(),
-		addEmailButton,
-		cancelButtonAction = {
-			flags: 'safe',
-			label: mw.msg( 'multimail-js-dialog-cancel' )
-		},
-		activeForm = Number( new mw.Uri( window.location.href ).query.activeform );
+	const $addEmailButton = $( '#ext-multimail-new-email' );
 
 	if ( !$addEmailButton.length ) {
 		return;
 	}
+
+	const NewEmailAddressDialog = require( './NewEmailAddressDialog.js' );
+	const ConfirmActionDialog = require( './ConfirmActionDialog.js' );
+	const ReauthenticationRequestDialog = require( './ReauthenticationRequestDialog.js' );
+	const config = require( './config.json' );
+	const windowManager = new OO.ui.WindowManager();
+	const api = new mw.Api();
+	const cancelButtonAction = {
+		flags: 'safe',
+		label: mw.msg( 'multimail-js-dialog-cancel' )
+	};
+	const activeForm = Number( new mw.Uri( window.location.href ).query.activeform );
 
 	/**
 	 * Verify authentication status before opening the given form.
@@ -28,15 +28,13 @@ function main() {
 	 * @param {string} win
 	 * @param {Object} data
 	 */
-	function verifyAuthenticationStatus( buttonId, win, data ) {
+	function verifyAuthenticationStatus( buttonId, win, data = {} ) {
 		// This is equivalent to OO.ui.alert, but uses the current window manager.
 		windowManager.openWindow( 'authenticationProgress', {
 			message: mw.msg(
 				'multimail-js-reauthentication-check'
 			)
-		} ).closed.then( function () {
-			api.abort();
-		} );
+		} ).closed.then( () => api.abort() );
 
 		api.postWithToken( 'multimail', {
 			action: 'multimail',
@@ -97,8 +95,8 @@ function main() {
 		} )
 	} );
 
-	addEmailButton = OO.ui.infuse( $addEmailButton ).on( 'click', function () {
-		verifyAuthenticationStatus( 0, 'addEmail', {} );
+	const addEmailButton = OO.ui.infuse( $addEmailButton ).on( 'click', function () {
+		verifyAuthenticationStatus( 0, 'addEmail' );
 	} );
 
 	if ( activeForm === 0 ) {
@@ -106,27 +104,25 @@ function main() {
 	}
 
 	$( '.ext-multimail-primary' ).each( function () {
-		var widget = OO.ui.infuse( $( this ) ),
-			data = widget.getData();
+		const widget = OO.ui.infuse( $( this ) );
+		const data = widget.getData();
 
-		widget.on( 'click', function () {
-			verifyAuthenticationStatus( data.buttonId, 'confirmPrimary', {
-				id: data.id,
-				message: mw.msg(
-					'multimail-special-change-primary-view-confirmation',
-					data.primary,
-					data.address
-				),
-				actions: [
-					cancelButtonAction,
-					{
-						flags: [ 'primary', 'progressive' ],
-						label: mw.msg( 'multimail-emails-pager-make-primary-button-label' ),
-						action: 'confirm'
-					}
-				]
-			} );
-		} );
+		widget.on( 'click', () => verifyAuthenticationStatus( data.buttonId, 'confirmPrimary', {
+			id: data.id,
+			message: mw.msg(
+				'multimail-special-change-primary-view-confirmation',
+				data.primary,
+				data.address
+			),
+			actions: [
+				cancelButtonAction,
+				{
+					flags: [ 'primary', 'progressive' ],
+					label: mw.msg( 'multimail-emails-pager-make-primary-button-label' ),
+					action: 'confirm'
+				}
+			]
+		} ) );
 
 		if ( data.buttonId === activeForm ) {
 			widget.emit( 'click' );
@@ -134,26 +130,24 @@ function main() {
 	} );
 
 	$( '.ext-multimail-delete' ).each( function () {
-		var widget = OO.ui.infuse( $( this ) ),
-			data = widget.getData();
+		const widget = OO.ui.infuse( $( this ) );
+		const data = widget.getData();
 
-		widget.on( 'click', function () {
-			verifyAuthenticationStatus( data.buttonId, 'confirmDelete', {
-				id: data.id,
-				message: mw.msg(
-					'multimail-special-delete-view-confirmation',
-					data.address
-				),
-				actions: [
-					cancelButtonAction,
-					{
-						flags: [ 'primary', 'destructive' ],
-						label: mw.msg( 'multimail-special-delete-view-confirmation-submit-label-message' ),
-						action: 'confirm'
-					}
-				]
-			} );
-		} );
+		widget.on( 'click', () => verifyAuthenticationStatus( data.buttonId, 'confirmDelete', {
+			id: data.id,
+			message: mw.msg(
+				'multimail-special-delete-view-confirmation',
+				data.address
+			),
+			actions: [
+				cancelButtonAction,
+				{
+					flags: [ 'primary', 'destructive' ],
+					label: mw.msg( 'multimail-special-delete-view-confirmation-submit-label-message' ),
+					action: 'confirm'
+				}
+			]
+		} ) );
 
 		if ( data.buttonId === activeForm ) {
 			widget.emit( 'click' );

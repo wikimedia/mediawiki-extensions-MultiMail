@@ -46,13 +46,13 @@ ConfirmActionDialog.prototype.getSetupProcess = function ( data ) {
 };
 
 ConfirmActionDialog.prototype.getActionProcess = function ( action ) {
-	var dialog = this,
-		api = new mw.Api(),
-		dfd = new $.Deferred();
-
 	if ( action !== 'confirm' ) {
 		return ConfirmActionDialog.super.prototype.getActionProcess.call( this, action );
 	}
+
+	const dialog = this;
+	const api = new mw.Api();
+	const dfd = new $.Deferred();
 
 	dialog.pushPending();
 
