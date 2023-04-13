@@ -38,6 +38,7 @@
 	"access-multimail-special-change-primary-view-confirmation-submit": "",
 	"multimail-special-change-primary-view-confirmation": "Are you sure you want to change your primary email address from $1 to $2?",
 	"multimail-special-change-primary-view": "Change primary email address",
+	"multimail-emails-confirm-broken-token": "Invalid confirmation code or user ID.\nCheck your email, the confirmation link might have been truncated by your email client.",
 	"multimail-emails-confirm-invalid": "Invalid confirmation code.\nThe code may have expired.",
 	"multimail-emails-confirm-success": "Your email address has now been confirmed.",
 	"multimail-special-delete-view-confirmation": "Are you sure you want to delete the email address $1?",

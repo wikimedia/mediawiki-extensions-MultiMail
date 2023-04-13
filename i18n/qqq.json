@@ -38,6 +38,7 @@
 	"access-multimail-special-change-primary-view-confirmation-submit": "{{doc-accesskey}}\n\nSee also\n* {{msg-mw|multimail-special-change-primary-view-confirmation-submit-label-message}}\n* {{msg-mw|tooltip-multimail-special-change-primary-view-confirmation-submit}}",
 	"multimail-special-change-primary-view-confirmation": "Confirmation message shown when changing the primary email address.\n\nParameters:\n* $1 - Current primary email address\n* $2 - New primary email address",
 	"multimail-special-change-primary-view": "Title for the form that requests confirmation to change the primary email address.",
+	"multimail-emails-confirm-broken-token": "Message displayed when the confirmation of an email address failed because the token or user id was in an invalid format.\n\nSee also:\n*{{msg-mw|confirmemail_invalid_format}}",
 	"multimail-emails-confirm-invalid": "Message displayed when the confirmation of an email address failed.\n\nSee also:\n*{{msg-mw|confirmemail_invalid}}",
 	"multimail-emails-confirm-success": "Message displayed when the confirmation of an email address was successful.\n\nSee also:\n*{{msg-mw|confirmemail_loggedin}}",
 	"multimail-special-delete-view-confirmation": "Confirmation message shown when deleting an email address.\n\nParameters:\n* $1 - Email address to be deleted",

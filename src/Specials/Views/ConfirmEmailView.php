@@ -5,7 +5,9 @@ namespace MediaWiki\Extension\MultiMail\Specials\Views;
 use MediaWiki\Extension\MultiMail\SpecialPage\Views\View;
 use Profiler;
 use ThrottledError;
+use User;
 use Wikimedia\ScopedCallback;
+use function explode;
 use function preg_match;
 
 class ConfirmEmailView extends View {
@@ -13,17 +15,26 @@ class ConfirmEmailView extends View {
 	public function show( ?string $subpage ): void {
 		$out = $this->getOutput();
 
-		if ( !preg_match( '/^confirm\/([1-9][0-9]*)\/([a-z0-9]{32})$/', $subpage ?? '', $matches ) ) {
-			// This is not a typical user-visible end-point, being a sub-page,
-			// so just redirect back to main on malformed urls.
+		if ( !str_starts_with( $subpage ?? '', 'confirm/' ) || substr_count( $subpage, '/' ) < 2 ) {
 			$out->redirect( $this->getPageTitle()->getLocalURL() );
+
+			return;
+		}
+
+		[ , $id, $token ] = explode( '/', $subpage, 2 );
+
+		if (
+			!preg_match( '/[1-9][0-9]*/', $id ) ||
+			!User::isWellFormedConfirmationToken( $token )
+		) {
+			$out->addWikiMsg( 'multimail-emails-confirm-broken-token' );
+
+			return;
 		}
 
 		if ( $this->getUser()->pingLimiter( 'confirmemail' ) ) {
 			throw new ThrottledError();
 		}
-
-		list( , $id, $token ) = $matches;
 
 		$scope = Profiler::instance()->getTransactionProfiler()->silenceForScope();
 
