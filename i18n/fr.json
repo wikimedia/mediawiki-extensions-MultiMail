@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Gomoko",
 			"Verdy p",
 			"Wladek92"
 		]
@@ -37,6 +38,7 @@
 	"tooltip-multimail-special-change-primary-view-confirmation-submit": "Changer l’adresse de courriel principale ?",
 	"multimail-special-change-primary-view-confirmation": "Êtes-vous sûr{{GENDER:||e}} de vouloir changer votre adresse de courriel principale de $1 en $2 ?",
 	"multimail-special-change-primary-view": "Changer l’adresse de courriel principale",
+	"multimail-emails-confirm-broken-token": "Code de confirmation ou identifiant utilisateur non valide.\nVérifier votre courriel, le lien de confirmation peut avoir été tronqué par votre client de messagerie.",
 	"multimail-emails-confirm-invalid": "Code de confirmation non valide.\nLe code a peut-être expiré.",
 	"multimail-emails-confirm-success": "Votre adresse de courriel est maintenant confirmée.",
 	"multimail-special-delete-view-confirmation": "Êtes-vous sûr{{GENDER:||e}} de vouloir supprimer l’adresse de courriel $1 ?",

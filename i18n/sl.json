@@ -36,6 +36,7 @@
 	"tooltip-multimail-special-change-primary-view-confirmation-submit": "Spremeni primarni e-poštni naslov",
 	"multimail-special-change-primary-view-confirmation": "Ste prepričani, da želite spremeniti svoj primarni e-poštni naslov iz $1 v $2?",
 	"multimail-special-change-primary-view": "Spremeni primarni e-poštni naslov",
+	"multimail-emails-confirm-broken-token": "Nwveljavna potrditvena koda ali ID uporabnika.\nPreverite svoj e-poštni naslov; potrditveno povezavo je morda skrajšal e-poštni odjemalec.",
 	"multimail-emails-confirm-invalid": "Neveljavna potrditvena koda.\nKoda je morda pretekla.",
 	"multimail-emails-confirm-success": "Vaš e-poštni naslov je zdaj potrjen.",
 	"multimail-special-delete-view-confirmation": "Ste prepričani, da želite izbrisati e-poštni naslov $1?",

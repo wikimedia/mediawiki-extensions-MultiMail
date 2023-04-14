@@ -35,6 +35,7 @@
 	"tooltip-multimail-special-change-primary-view-confirmation-submit": "Cambiar le adresse de e-mail principal",
 	"multimail-special-change-primary-view-confirmation": "Es tu secur de voler cambiar tu adresse de e-mail principal de $1 in $2?",
 	"multimail-special-change-primary-view": "Cambiar adresse de e-mail principal",
+	"multimail-emails-confirm-broken-token": "Codice de confirmation o identificator de usator non valide.\nVerifica tu e-mail. Es possibile que le ligamine de confirmation ha essite truncate per tu programma de e-mail.",
 	"multimail-emails-confirm-invalid": "Codice de confirmation invalide.\nEs possibile que le codice ha expirate.",
 	"multimail-emails-confirm-success": "Tu adresse de e-mail ha ora essite confirmate.",
 	"multimail-special-delete-view-confirmation": "Es tu secur de voler deler le adresse de e-mail $1?",

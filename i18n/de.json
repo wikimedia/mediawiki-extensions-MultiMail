@@ -35,6 +35,7 @@
 	"tooltip-multimail-special-change-primary-view-confirmation-submit": "Primär-E-Mail-Adresse ändern",
 	"multimail-special-change-primary-view-confirmation": "Möchtest du deine primäre E-Mail-Adresse wirklich von $1 in $2 ändern?",
 	"multimail-special-change-primary-view": "Primär-E-Mail-Adresse ändern",
+	"multimail-emails-confirm-broken-token": "Ungültiger Bestätigungscode oder Benutzer-ID.\nÜberprüfe deine E-Mail; der Bestätigungslink wurde möglicherweise von deinem E-Mail-Programm abgeschnitten.",
 	"multimail-emails-confirm-invalid": "Ungültiger Bestätigungscode.\nDer Code ist möglicherweise abgelaufen.",
 	"multimail-emails-confirm-success": "Deine E-Mail-Adresse wurde erfolgreich bestätigt.",
 	"multimail-special-delete-view-confirmation": "Bist du sicher, dass du die E-Mail-Adresse $1 löschen möchtest?",
