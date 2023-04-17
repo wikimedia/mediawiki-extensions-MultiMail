@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Eduardoaddad"
+			"Eduardoaddad",
+			"Re demz"
 		]
 	},
 	"multimail-emails-pager-email": "Endereço de e-mail",
@@ -10,6 +11,7 @@
 	"multimail-emails-pager-primary": "Principal",
 	"multimail-emails-pager-no-confirmation-needed": "Não é necessário confirmação",
 	"multimail-special-add-email-view-new-email-label-message": "Novo endereço de e-mail:",
+	"multimail-emails-confirm-broken-token": "Código de confirmação ou identidade de usuário invalidos.\nVerifique o seu email, o link de confirmação pode ter sido truncado por seu cliente de email.",
 	"multimail-special-delete-view": "Eliminar $1",
 	"multimail-js-dialog-cancel": "Cancelar"
 }
