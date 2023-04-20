@@ -35,6 +35,7 @@
 	"tooltip-multimail-special-change-primary-view-confirmation-submit": "Смени главна е-поштенска адреса",
 	"multimail-special-change-primary-view-confirmation": "Дали сигурно сакате да ја смените главната е-поштенска адреса од $1 на $2?",
 	"multimail-special-change-primary-view": "Смени главна е-поштенска адреса",
+	"multimail-emails-confirm-broken-token": "Неважечки потврден код или корисничка назнака.\nПроверете си ја е-поштата. Можно е вашиот клиент за е-поштенски клиент да ја скратил потврдната врска.",
 	"multimail-emails-confirm-invalid": "Неважечки потврден код.\nКодот може да е истечен.",
 	"multimail-emails-confirm-success": "Вашата е-поштенска адреса сега е потврдена.",
 	"multimail-special-delete-view-confirmation": "Дали сигурно сакате да ја избришете е-поштенската адреса $1?",
