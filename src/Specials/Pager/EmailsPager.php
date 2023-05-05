@@ -10,7 +10,7 @@ use OOUI\ButtonGroupWidget;
 use OOUI\ButtonWidget;
 use SpecialPage;
 use TablePager;
-use Wikimedia\Rdbms\IDatabase;
+use Wikimedia\Rdbms\IReadableDatabase;
 use function array_unshift;
 use function htmlspecialchars;
 use function iterator_to_array;
@@ -25,12 +25,12 @@ class EmailsPager extends TablePager {
 	/**
 	 * @param IContextSource $context
 	 * @param CentralIdLookup $centralIdLookup
-	 * @param IDatabase $mailDb
+	 * @param IReadableDatabase $mailDb
 	 */
 	public function __construct(
 		IContextSource $context,
 		CentralIdLookup $centralIdLookup,
-		IDatabase $mailDb
+		IReadableDatabase $mailDb
 	) {
 		$this->centralIdLookup = $centralIdLookup;
 		$this->mDb = $mailDb;

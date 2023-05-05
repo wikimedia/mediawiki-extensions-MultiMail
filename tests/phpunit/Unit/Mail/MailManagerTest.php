@@ -14,10 +14,9 @@ use MediaWikiUnitTestCase;
 use Title;
 use TitleFactory;
 use User;
+use Wikimedia\Rdbms\IConnectionProvider;
 use Wikimedia\Rdbms\IDatabase;
-use Wikimedia\Rdbms\ILoadBalancer;
 use function str_repeat;
-use const DB_REPLICA;
 
 /**
  * @covers \MediaWiki\Extension\MultiMail\Mail\MailManager
@@ -33,14 +32,14 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 		return $titleFactory;
 	}
 
-	public function testGetMailDb(): void {
+	public function testGetReplicaMailDbConnection(): void {
 		$db = $this->createNoOpMock( IDatabase::class );
 
-		$lb = $this->createMock( ILoadBalancer::class );
-		$lb->method( 'getConnection' )->with( DB_REPLICA, [], 'mailDbName' )->willReturn( $db );
+		$dbProvider = $this->createMock( IConnectionProvider::class );
+		$dbProvider->method( 'getReplicaDatabase' )->with( 'mailDbName' )->willReturn( $db );
 
 		$manager = new MailManager(
-			$lb,
+			$dbProvider,
 			$this->createNoOpMock( CentralIdLookup::class ),
 			$this->createNoOpMock( IEmailer::class ),
 			$this->getTitleFactory(),
@@ -50,12 +49,12 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 			0
 		);
 
-		static::assertEquals( $db, $manager->getMailDb( DB_REPLICA ) );
+		static::assertEquals( $db, $manager->getReplicaMailDbConnection() );
 	}
 
 	public function testMakePrimaryMismatchingUsers(): void {
 		$manager = new MailManager(
-			$this->createNoOpMock( ILoadBalancer::class ),
+			$this->createNoOpMock( IConnectionProvider::class ),
 			$this->createNoOpMock( CentralIdLookup::class ),
 			$this->createNoOpMock( IEmailer::class ),
 			$this->getTitleFactory(),
@@ -86,7 +85,7 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 
 	public function testConfirmWithAuthenticationDisabled(): void {
 		$manager = new MailManager(
-			$this->createNoOpMock( ILoadBalancer::class ),
+			$this->createNoOpMock( IConnectionProvider::class ),
 			$this->createNoOpMock( CentralIdLookup::class ),
 			$this->createNoOpMock( IEmailer::class ),
 			$this->getTitleFactory(),
@@ -106,7 +105,7 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 
 	public function testConfirmWithNegativeId(): void {
 		$manager = new MailManager(
-			$this->createNoOpMock( ILoadBalancer::class ),
+			$this->createNoOpMock( IConnectionProvider::class ),
 			$this->createNoOpMock( CentralIdLookup::class ),
 			$this->createNoOpMock( IEmailer::class ),
 			$this->getTitleFactory(),
@@ -129,7 +128,7 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 	 */
 	public function testConfirmWithInvalidTokenFormat( string $token ): void {
 		$manager = new MailManager(
-			$this->createNoOpMock( ILoadBalancer::class ),
+			$this->createNoOpMock( IConnectionProvider::class ),
 			$this->createNoOpMock( CentralIdLookup::class ),
 			$this->createNoOpMock( IEmailer::class ),
 			$this->getTitleFactory(),
@@ -160,7 +159,7 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 
 	public function testGetEmailFromIdNegativeId(): void {
 		$manager = new MailManager(
-			$this->createNoOpMock( ILoadBalancer::class ),
+			$this->createNoOpMock( IConnectionProvider::class ),
 			$this->createNoOpMock( CentralIdLookup::class ),
 			$this->createNoOpMock( IEmailer::class ),
 			$this->getTitleFactory(),

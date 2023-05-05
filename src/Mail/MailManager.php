@@ -18,15 +18,14 @@ use Status;
 use Title;
 use TitleFactory;
 use User;
+use Wikimedia\Rdbms\IConnectionProvider;
 use Wikimedia\Rdbms\IDatabase;
-use Wikimedia\Rdbms\ILoadBalancer;
+use Wikimedia\Rdbms\IReadableDatabase;
 use function strlen;
 use function wfTimestampNow;
-use const DB_PRIMARY;
-use const DB_REPLICA;
 
 class MailManager {
-	private ILoadBalancer $lb;
+	private IConnectionProvider $dbProvider;
 
 	private CentralIdLookup $centralIdLookup;
 
@@ -46,7 +45,7 @@ class MailManager {
 	private Title $emailUndoTitle;
 
 	/**
-	 * @param ILoadBalancer $lb
+	 * @param IConnectionProvider $dbProvider
 	 * @param CentralIdLookup $centralIdLookup
 	 * @param IEmailer $emailer
 	 * @param TitleFactory $titleFactory
@@ -56,7 +55,7 @@ class MailManager {
 	 * @param int $userEmailConfirmationTokenExpiry
 	 */
 	public function __construct(
-		ILoadBalancer $lb,
+		IConnectionProvider $dbProvider,
 		CentralIdLookup $centralIdLookup,
 		IEmailer $emailer,
 		TitleFactory $titleFactory,
@@ -65,7 +64,7 @@ class MailManager {
 		bool $emailAuthentication,
 		int $userEmailConfirmationTokenExpiry
 	) {
-		$this->lb = $lb;
+		$this->dbProvider = $dbProvider;
 		$this->centralIdLookup = $centralIdLookup;
 		$this->emailer = $emailer;
 		$this->hookRunner = new HookRunner( $hookContainer );
@@ -80,13 +79,20 @@ class MailManager {
 	}
 
 	/**
-	 * Get a connection to the database with the user_secondary_emails table.
-	 *
-	 * @param int $i
+	 * Get a connection to the database with the user_secondary_emails table on the primary database server.
 	 * @return IDatabase
 	 */
-	public function getMailDb( int $i ): IDatabase {
-		return $this->lb->getConnection( $i, [], $this->mailDb );
+	private function getPrimaryMailDbConnection(): IDatabase {
+		return $this->dbProvider->getPrimaryDatabase( $this->mailDb );
+	}
+
+	/**
+	 * Get a connection to the database with the user_secondary_emails table on a replica.
+	 *
+	 * @return IReadableDatabase
+	 */
+	public function getReplicaMailDbConnection(): IReadableDatabase {
+		return $this->dbProvider->getReplicaDatabase( $this->mailDb );
 	}
 
 	/**
@@ -113,9 +119,9 @@ class MailManager {
 	 * @return Status
 	 */
 	public function sendConfirmationMail( SecondaryEmail $email, IContextSource $userContext ): Status {
-		list( $token, $expiration, $hashedToken ) = $email->generateNewConfirmationToken();
+		[ $token, $expiration, $hashedToken ] = $email->generateNewConfirmationToken();
 
-		$dbw = $this->getMailDb( DB_PRIMARY );
+		$dbw = $this->getPrimaryMailDbConnection();
 		$dbw->newUpdateQueryBuilder()
 			->update( 'user_secondary_email' )
 			->set( [
@@ -218,7 +224,7 @@ class MailManager {
 			throw new InvalidArgumentException( 'Cannot add secondary email for unattached user!' );
 		}
 
-		$dbw = $this->getMailDb( DB_PRIMARY );
+		$dbw = $this->getPrimaryMailDbConnection();
 
 		$existingEntry = $dbw->newSelectQueryBuilder()
 			->select( 'use_id' )
@@ -319,7 +325,7 @@ class MailManager {
 			return Status::newFatal( 'multimail-manager-address-already-exists' );
 		}
 
-		$dbw = $this->getMailDb( DB_PRIMARY );
+		$dbw = $this->getPrimaryMailDbConnection();
 
 		$dbw->insert(
 			'user_secondary_email',
@@ -394,7 +400,7 @@ class MailManager {
 			throw new InvalidArgumentException( 'Cannot verify secondary email for unattached user!' );
 		}
 
-		$dbw = $this->getMailDb( DB_PRIMARY );
+		$dbw = $this->getPrimaryMailDbConnection();
 		$row = $dbw->newSelectQueryBuilder()
 			->select( [
 				'use_id',
@@ -431,7 +437,7 @@ class MailManager {
 	 * @return bool
 	 */
 	public function updateAuthenticationStatus( SecondaryEmail $email, ?string $newValue ): bool {
-		$dbw = $this->getMailDb( DB_PRIMARY );
+		$dbw = $this->getPrimaryMailDbConnection();
 		$dbw->newUpdateQueryBuilder()
 			->update( 'user_secondary_email' )
 			->set( [ 'use_email_authenticated' => $dbw->timestampOrNull( $newValue ) ] )
@@ -455,7 +461,7 @@ class MailManager {
 			throw new InvalidArgumentException( 'Cannot remove secondary email for unattached user!' );
 		}
 
-		$dbw = $this->getMailDb( DB_PRIMARY );
+		$dbw = $this->getPrimaryMailDbConnection();
 
 		$dbw->delete(
 			'user_secondary_email',
@@ -488,7 +494,7 @@ class MailManager {
 			throw new InvalidArgumentException( 'Cannot select secondary email for unattached user!' );
 		}
 
-		$queryBuilder = $this->getMailDb( DB_REPLICA )->newSelectQueryBuilder()
+		$queryBuilder = $this->getReplicaMailDbConnection()->newSelectQueryBuilder()
 			->select( [
 				'use_id',
 				'use_email',

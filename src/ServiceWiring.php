@@ -12,7 +12,7 @@ return [
 		$mainConfig = $services->getMainConfig();
 
 		return new MailManager(
-			$services->getDBLoadBalancerFactory()->getMainLB( $config->get( 'MultiMailDB' ) ),
+			$services->getDBLoadBalancerFactory(),
 			$services->getCentralIdLookup(),
 			$services->getEmailer(),
 			$services->getTitleFactory(),
