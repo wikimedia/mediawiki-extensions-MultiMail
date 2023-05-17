@@ -11,7 +11,7 @@ use MediaWiki\Tests\HookContainer\HookRunnerTestBase;
  */
 class HookRunnerTest extends HookRunnerTestBase {
 	/** @inheritDoc */
-	public function provideHookRunners(): Generator {
+	public static function provideHookRunners(): Generator {
 		yield HookRunner::class => [ HookRunner::class ];
 	}
 }
