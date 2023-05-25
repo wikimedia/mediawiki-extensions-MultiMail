@@ -57,6 +57,7 @@
 	"multimail-confirmationmail-secondary_body": "شخص ما ، ربما أنت ، من عنوان IP $1 ،! N! أضاف عنوان البريد الإلكتروني هذا على {{SITENAME}} إلى الحساب \" $2 \".! N !! N! لتأكيد أن هذا الحساب يخصك حقًا ، افتح هذا الارتباط في المتصفح الخاص بك:! N !! N! $3 ! N !! N! إذا كان الحساب لا يخصك ، يمكنك تجاهل هذا البريد الإلكتروني.! N !! N! ستنتهي صلاحية رمز التأكيد هذا عند $4 .",
 	"multimail-manager-db-confirmation-code-add-fail": "فشل تخزين رمز التأكيد في قاعدة البيانات.",
 	"multimail-manager-db-save-old-primary-fail": "فشل تخزين عنوان البريد الإلكتروني القديم في قاعدة البيانات.",
+	"multimail-manager-address-already-exists": "عنوان البريد الإلكتروني هذا مرتبط بالفعل بهذا الحساب.",
 	"multimail-manager-db-add-new-secondary-fail": "فشل تخزين عنوان البريد الإلكتروني الجديد في قاعدة البيانات.",
 	"multimail-emails-invalid-id": "عنوان البريد الإلكتروني غير صالح",
 	"multimail-emails-invalid-id-body": "عنوان البريد الإلكتروني المحدد ليس عنوان بريد إلكتروني صالحًا.",
