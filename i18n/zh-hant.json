@@ -36,6 +36,7 @@
 	"tooltip-multimail-special-change-primary-view-confirmation-submit": "更改主要電子郵件地址",
 	"multimail-special-change-primary-view-confirmation": "您確定要將您的主要電子郵件地址從 $1 更改成 $2 嗎？",
 	"multimail-special-change-primary-view": "更改主要電子郵件地址",
+	"multimail-emails-confirm-broken-token": "無效的確認代碼或使用者 ID。\n請檢查您的電子郵件，確認連結是否被您的電子郵件客戶端截斷。",
 	"multimail-emails-confirm-invalid": "無效的確認碼。\n該確認碼可能已經過期。",
 	"multimail-emails-confirm-success": "已確認您的電子郵件地址。",
 	"multimail-special-delete-view-confirmation": "您確定要刪除這個電子郵件地址：$1？",
