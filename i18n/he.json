@@ -4,5 +4,8 @@
 			"Amire80"
 		]
 	},
+	"multimail-special-request-confirmation-code-view": "בקשת קוד אישור",
+	"multimail-special-request-confirmation-code-view-submit": "בקשת קוד אישור",
+	"tooltip-multimail-special-request-confirmation-code-view-submit": "בקשת קוד אישור",
 	"multimail-js-dialog-cancel": "ביטול"
 }
