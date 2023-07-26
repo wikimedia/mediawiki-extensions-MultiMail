@@ -249,11 +249,11 @@ class MailManager {
 				->caller( __METHOD__ )
 				->execute();
 		} else {
-			$dbw->insert(
-				'user_secondary_email',
-				[ 'use_cuid' => $centralId ] + $set,
-				__METHOD__
-			);
+			$dbw->newInsertQueryBuilder()
+				->insert( 'user_secondary_email' )
+				->row( [ 'use_cuid' => $centralId ] + $set )
+				->caller( __METHOD__ )
+				->execute();
 
 			$existingEntry = $dbw->insertId();
 		}
@@ -327,14 +327,14 @@ class MailManager {
 
 		$dbw = $this->getPrimaryMailDbConnection();
 
-		$dbw->insert(
-			'user_secondary_email',
-			[
+		$dbw->newInsertQueryBuilder()
+			->insert( 'user_secondary_email' )
+			->row( [
 				'use_cuid' => $this->centralIdLookup->centralIdFromLocalUser( $user ),
 				'use_email' => $address
-			],
-			__METHOD__
-		);
+			] )
+			->caller( __METHOD__ )
+			->execute();
 
 		if ( $dbw->affectedRows() === 0 ) {
 			return Status::newFatal( 'multimail-manager-db-add-new-secondary-fail' );
