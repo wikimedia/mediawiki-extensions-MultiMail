@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Winston Sung"
+		]
+	},
+	"multimail-special-emailaddresses": "Adrese e-pošte",
+	"multimail-desc": "Dodaje podršku za više adresa e-pošte",
+	"multimail-emails-add-email-button-label": "Dodaj novu adresu",
+	"multimail-emails-pager-email": "Adresa e-pošte",
+	"multimail-emails-pager-status": "Status",
+	"multimail-emails-pager-buttons": "Upravljaj",
+	"multimail-emails-pager-confirm-button-label": "Potvrdi",
+	"tooltip-multimail-emails-pager-confirm-button-label": "Provjerite status potvrde ove adrese e-pošte",
+	"multimail-special-request-confirmation-code-view-confirmation-email-sent": "Biti će poslan novi potvrdni kod na vašu adresu e-pošte.",
+	"multimail-special-request-confirmation-code-view-confirmation-email-pending": "Kod za potvrdu već vam je poslan e-poštom; ako ste nedavno dodali ovu adresu e-pošte, možda ćete htjeti pričekati par minuta da stigne prije nego što pokušate zatražiti novi kod.",
+	"multimail-needlogin": "Morate biti prijavljeni da biste izravno pristupili ovoj stranici.",
+	"multimail-no-primary-body": "Potreba je osnovna adresa e-pošte za korištenje ove posebne stranice. Možete ga postaviti [[Special:Preferences#mw-prefsection-personal-email|u svojim postavkama]].",
+	"multimail-email-disabled": "Email je onemogućen",
+	"multimail-js-dialog-cancel": "Otkaži",
+	"right-multimail": "Pregled i uređivanje dodatnih adresi e-pošte.",
+	"action-multimail": "pregled i uređivanje dodatnih adresi e-pošte.",
+	"apihelp-multimail-summary": "Priložnički modul za JavaScript na [[Special:EmailAddresses]].",
+	"apihelp-multimail-param-email": "Adresa e-pošte.",
+	"apihelp-multimail-param-id": "Naznaka usporedne adrese e-pošte što pripada trenutnom korisniku."
+}
