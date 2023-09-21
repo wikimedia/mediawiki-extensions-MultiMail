@@ -74,7 +74,7 @@
 		"remoteExtPath": "MultiMail/resources"
 	},
 	"ConfigRegistry": {
-		"MultiMail": "GlobalVarConfig::newInstance"
+		"MultiMail": "MediaWiki\\Config\\GlobalVarConfig::newInstance"
 	},
 	"ServiceWiringFiles": [
 		"src/ServiceWiring.php"

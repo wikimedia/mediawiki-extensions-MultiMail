@@ -1,19 +1,19 @@
 <?php
 
-namespace MediaWiki\Extension\MultiMail\Tests\Unit\Hook;
+namespace MediaWiki\Extension\MultiMail\Tests\Integration\Hook;
 
 use MediaWiki\Extension\MultiMail\Hook\EmailHandler;
 use MediaWiki\Extension\MultiMail\Mail\MailManager;
 use MediaWiki\Extension\MultiMail\Mail\SecondaryEmail;
-use MediaWikiUnitTestCase;
-use Status;
-use User;
+use MediaWiki\Status\Status;
+use MediaWiki\User\User;
+use MediaWikiIntegrationTestCase;
 use function wfTimestampNow;
 
 /**
  * @covers \MediaWiki\Extension\MultiMail\Hook\EmailHandler
  */
-class EmailHandlerTest extends MediaWikiUnitTestCase {
+class EmailHandlerTest extends MediaWikiIntegrationTestCase {
 	public function testOnConfirmEmailCompleteNoSecondaryEmailFound(): void {
 		$manager = $this->createNoOpMock( MailManager::class, [ 'getEmailFromAddress' ] );
 		$manager->method( 'getEmailFromAddress' )->willReturn( null );

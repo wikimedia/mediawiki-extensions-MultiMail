@@ -4,8 +4,8 @@ namespace MediaWiki\Extension\MultiMail\Hook;
 
 use MediaWiki\Extension\MultiMail\Mail\MailManager;
 use MediaWiki\Hook\PrefsEmailAuditHook;
+use MediaWiki\Parser\Sanitizer;
 use MediaWiki\User\Hook\ConfirmEmailCompleteHook;
-use Sanitizer;
 
 class EmailHandler implements ConfirmEmailCompleteHook, PrefsEmailAuditHook {
 	private static bool $isCalledFromMultiMail = false;

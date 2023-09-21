@@ -2,7 +2,6 @@
 
 namespace MediaWiki\Extension\MultiMail\Specials;
 
-use CentralIdLookup;
 use ErrorPageError;
 use MediaWiki\Auth\AuthManager;
 use MediaWiki\Extension\MultiMail\Mail\MailManager;
@@ -13,7 +12,8 @@ use MediaWiki\Extension\MultiMail\Specials\Views\DeleteEmailView;
 use MediaWiki\Extension\MultiMail\Specials\Views\EmailsView;
 use MediaWiki\Extension\MultiMail\Specials\Views\RequestConfirmationCodeView;
 use MediaWiki\MainConfigNames;
-use SpecialPage;
+use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\User\CentralId\CentralIdLookup;
 use UserNotLoggedIn;
 use function str_starts_with;
 use function substr_count;

@@ -3,11 +3,11 @@
 namespace MediaWiki\Extension\MultiMail\Mail;
 
 use MediaWiki\Mail\UserEmailContact;
+use MediaWiki\User\User;
 use MediaWiki\User\UserIdentity;
 use MWCryptRand;
 use MWTimestamp;
 use stdClass;
-use User;
 use function md5;
 use function wfTimestamp;
 use const TS_MW;

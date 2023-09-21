@@ -6,7 +6,6 @@ use HTMLFormField;
 use InvalidArgumentException;
 use Message;
 use MessageSpecifier;
-use MWException;
 use OOUI\HtmlSnippet;
 use OOUI\MessageWidget;
 
@@ -48,7 +47,6 @@ class HTMLMessageField extends HTMLFormField {
 	 *   - messagetype: type of the message. Supported types are success, notice, warning and error.
 	 *    Defaults to notice.
 	 *   - parse: if the message should be parsed, instead of escaped.
-	 * @throws MWException
 	 */
 	public function __construct( array $info ) {
 		$this->type = $info['messagetype'] ?? 'notice';

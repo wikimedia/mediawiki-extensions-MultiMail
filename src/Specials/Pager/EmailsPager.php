@@ -2,14 +2,14 @@
 
 namespace MediaWiki\Extension\MultiMail\Specials\Pager;
 
-use CentralIdLookup;
-use FakeResultWrapper;
 use IContextSource;
 use MediaWiki\MainConfigNames;
+use MediaWiki\Pager\TablePager;
+use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\User\CentralId\CentralIdLookup;
 use OOUI\ButtonGroupWidget;
 use OOUI\ButtonWidget;
-use SpecialPage;
-use TablePager;
+use Wikimedia\Rdbms\FakeResultWrapper;
 use Wikimedia\Rdbms\IReadableDatabase;
 use function array_unshift;
 use function htmlspecialchars;

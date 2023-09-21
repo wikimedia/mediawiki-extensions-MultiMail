@@ -2,7 +2,6 @@
 
 namespace MediaWiki\Extension\MultiMail\Mail;
 
-use CentralIdLookup;
 use IContextSource;
 use InvalidArgumentException;
 use LogicException;
@@ -13,11 +12,12 @@ use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Mail\IEmailer;
 use MediaWiki\MainConfigNames;
-use Sanitizer;
-use Status;
-use Title;
-use TitleFactory;
-use User;
+use MediaWiki\Parser\Sanitizer;
+use MediaWiki\Status\Status;
+use MediaWiki\Title\Title;
+use MediaWiki\Title\TitleFactory;
+use MediaWiki\User\CentralId\CentralIdLookup;
+use MediaWiki\User\User;
 use Wikimedia\Rdbms\IConnectionProvider;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\IReadableDatabase;
@@ -250,7 +250,7 @@ class MailManager {
 				->execute();
 		} else {
 			$dbw->newInsertQueryBuilder()
-				->insert( 'user_secondary_email' )
+				->insertInto( 'user_secondary_email' )
 				->row( [ 'use_cuid' => $centralId ] + $set )
 				->caller( __METHOD__ )
 				->execute();
@@ -328,7 +328,7 @@ class MailManager {
 		$dbw = $this->getPrimaryMailDbConnection();
 
 		$dbw->newInsertQueryBuilder()
-			->insert( 'user_secondary_email' )
+			->insertInto( 'user_secondary_email' )
 			->row( [
 				'use_cuid' => $this->centralIdLookup->centralIdFromLocalUser( $user ),
 				'use_email' => $address

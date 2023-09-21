@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\MultiMail\SpecialPage\Views;
 
+use MediaWiki\Status\Status;
 use OOUIHTMLForm;
-use Status;
 
 abstract class FormView extends View {
 	/** @inheritDoc */
@@ -11,9 +11,7 @@ abstract class FormView extends View {
 		$this->beforeForm( $subpage );
 
 		$form = ( new OOUIHTMLForm( $this->getFormFields(), $this->getContext() ) )
-			->setSubmitCallback( function ( array $data ): Status {
-				return $this->onSubmit( $data );
-			} )
+			->setSubmitCallback( fn ( array $data ) => $this->onSubmit( $data ) )
 			->setTokenSalt( 'multimail' )
 			->showCancel()
 			->setCancelTarget( $this->getPageTitle() );

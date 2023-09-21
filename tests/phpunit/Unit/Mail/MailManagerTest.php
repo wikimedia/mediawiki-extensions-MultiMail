@@ -2,7 +2,6 @@
 
 namespace MediaWiki\Extension\MultiMail\Tests\Unit\Mail;
 
-use CentralIdLookup;
 use IContextSource;
 use InvalidArgumentException;
 use LogicException;
@@ -10,10 +9,11 @@ use MediaWiki\Extension\MultiMail\Mail\MailManager;
 use MediaWiki\Extension\MultiMail\Mail\SecondaryEmail;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Mail\IEmailer;
+use MediaWiki\Title\Title;
+use MediaWiki\Title\TitleFactory;
+use MediaWiki\User\CentralId\CentralIdLookup;
+use MediaWiki\User\User;
 use MediaWikiUnitTestCase;
-use Title;
-use TitleFactory;
-use User;
 use Wikimedia\Rdbms\IConnectionProvider;
 use Wikimedia\Rdbms\IDatabase;
 use function str_repeat;
