@@ -73,9 +73,6 @@
 		"localBasePath": "resources",
 		"remoteExtPath": "MultiMail/resources"
 	},
-	"ConfigRegistry": {
-		"MultiMail": "MediaWiki\\Config\\GlobalVarConfig::newInstance"
-	},
 	"ServiceWiringFiles": [
 		"src/ServiceWiring.php"
 	],
@@ -124,10 +121,8 @@
 	"AvailableRights": [
 		"multimail"
 	],
-	"config": {
-		"MultiMailDB": {
-			"value": false
-		}
-	},
+	"DatabaseVirtualDomains": [
+		"MultiMail"
+	],
 	"manifest_version": 2
 }

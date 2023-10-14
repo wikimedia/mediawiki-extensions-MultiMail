@@ -36,7 +36,7 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 		$db = $this->createNoOpMock( IDatabase::class );
 
 		$dbProvider = $this->createMock( IConnectionProvider::class );
-		$dbProvider->method( 'getReplicaDatabase' )->with( 'mailDbName' )->willReturn( $db );
+		$dbProvider->method( 'getReplicaDatabase' )->with( 'MultiMail' )->willReturn( $db );
 
 		$manager = new MailManager(
 			$dbProvider,
@@ -44,7 +44,6 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 			$this->createNoOpMock( IEmailer::class ),
 			$this->getTitleFactory(),
 			$this->createNoOpMock( HookContainer::class ),
-			'mailDbName',
 			false,
 			0
 		);
@@ -59,7 +58,6 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 			$this->createNoOpMock( IEmailer::class ),
 			$this->getTitleFactory(),
 			$this->createNoOpMock( HookContainer::class ),
-			false,
 			false,
 			0
 		);
@@ -91,7 +89,6 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 			$this->getTitleFactory(),
 			$this->createNoOpMock( HookContainer::class ),
 			false,
-			false,
 			0
 		);
 
@@ -110,7 +107,6 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 			$this->createNoOpMock( IEmailer::class ),
 			$this->getTitleFactory(),
 			$this->createNoOpMock( HookContainer::class ),
-			false,
 			true,
 			0
 		);
@@ -133,7 +129,6 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 			$this->createNoOpMock( IEmailer::class ),
 			$this->getTitleFactory(),
 			$this->createNoOpMock( HookContainer::class ),
-			false,
 			true,
 			0
 		);
@@ -164,7 +159,6 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 			$this->createNoOpMock( IEmailer::class ),
 			$this->getTitleFactory(),
 			$this->createNoOpMock( HookContainer::class ),
-			false,
 			false,
 			0
 		);
