@@ -33,9 +33,6 @@ class MailManager {
 
 	private HookRunner $hookRunner;
 
-	/** @var false|string */
-	private $mailDb;
-
 	private bool $emailAuthentication;
 
 	private int $userEmailConfirmationTokenExpiry;
@@ -50,7 +47,6 @@ class MailManager {
 	 * @param IEmailer $emailer
 	 * @param TitleFactory $titleFactory
 	 * @param HookContainer $hookContainer
-	 * @param false|string $mailDb
 	 * @param bool $emailAuthentication
 	 * @param int $userEmailConfirmationTokenExpiry
 	 */
@@ -60,7 +56,6 @@ class MailManager {
 		IEmailer $emailer,
 		TitleFactory $titleFactory,
 		HookContainer $hookContainer,
-		$mailDb,
 		bool $emailAuthentication,
 		int $userEmailConfirmationTokenExpiry
 	) {
@@ -68,7 +63,6 @@ class MailManager {
 		$this->centralIdLookup = $centralIdLookup;
 		$this->emailer = $emailer;
 		$this->hookRunner = new HookRunner( $hookContainer );
-		$this->mailDb = $mailDb;
 		$this->emailAuthentication = $emailAuthentication;
 		$this->userEmailConfirmationTokenExpiry = $userEmailConfirmationTokenExpiry;
 
@@ -83,7 +77,7 @@ class MailManager {
 	 * @return IDatabase
 	 */
 	private function getPrimaryMailDbConnection(): IDatabase {
-		return $this->dbProvider->getPrimaryDatabase( $this->mailDb );
+		return $this->dbProvider->getPrimaryDatabase( 'MultiMail' );
 	}
 
 	/**
@@ -92,7 +86,7 @@ class MailManager {
 	 * @return IReadableDatabase
 	 */
 	public function getReplicaMailDbConnection(): IReadableDatabase {
-		return $this->dbProvider->getReplicaDatabase( $this->mailDb );
+		return $this->dbProvider->getReplicaDatabase( 'MultiMail' );
 	}
 
 	/**
