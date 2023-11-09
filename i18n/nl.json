@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"McDutchie"
 		]
 	},
 	"multimail-special-emailaddresses": "E-mailadressen",
@@ -72,5 +73,5 @@
 	"apihelp-multimail-summary": "API-module voor JavaScript op [[Special:EmailAddresses]].",
 	"apihelp-multimail-param-email": "E-mailadres.",
 	"apihelp-multimail-param-id": "ID van een secundair e-mailadres van de huidige gebruiker.",
-	"apihelp-multimail-param-mail-action": "Te ondernemen handeling met het secundaire e-mailadres."
+	"apihelp-multimail-param-mail-action": "De met het secundaire e-mailadres te verrichten handeling."
 }
