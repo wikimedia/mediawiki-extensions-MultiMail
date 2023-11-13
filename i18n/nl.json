@@ -36,6 +36,7 @@
 	"tooltip-multimail-special-change-primary-view-confirmation-submit": "Primair e-mailadres wijzigen",
 	"multimail-special-change-primary-view-confirmation": "Weet u zeker dat u uw primaire e-mailadres van $1 naar $2 wilt wijzigen?",
 	"multimail-special-change-primary-view": "Primair e-mailadres wijzigen",
+	"multimail-emails-confirm-broken-token": "Ongeldige bevestigingscode of gebruikers-ID.\nControleer uw e-mail. De bevestigingskoppeling is mogelijk ingekort door uw e-mailclient.",
 	"multimail-emails-confirm-invalid": "Ongeldige bevestigingscode.\nMogelijk is de code verlopen.",
 	"multimail-emails-confirm-success": "Uw e-mailadres is nu bevestigd.",
 	"multimail-special-delete-view-confirmation": "Weet u zeker dat u het e-mailadres $1 wilt verwijderen?",
@@ -73,5 +74,6 @@
 	"apihelp-multimail-summary": "API-module voor JavaScript op [[Special:EmailAddresses]].",
 	"apihelp-multimail-param-email": "E-mailadres.",
 	"apihelp-multimail-param-id": "ID van een secundair e-mailadres van de huidige gebruiker.",
-	"apihelp-multimail-param-mail-action": "De met het secundaire e-mailadres te verrichten handeling."
+	"apihelp-multimail-param-mail-action": "De met het secundaire e-mailadres te verrichten handeling.",
+	"apihelp-multimail-param-check-authentication-status": "Controleren of de gebruiker zich onlangs heeft aangemeld."
 }
