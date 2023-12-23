@@ -77,7 +77,7 @@ class MailManager {
 	 * @return IDatabase
 	 */
 	private function getPrimaryMailDbConnection(): IDatabase {
-		return $this->dbProvider->getPrimaryDatabase( 'MultiMail' );
+		return $this->dbProvider->getPrimaryDatabase( 'virtual-multimail' );
 	}
 
 	/**
@@ -86,7 +86,7 @@ class MailManager {
 	 * @return IReadableDatabase
 	 */
 	public function getReplicaMailDbConnection(): IReadableDatabase {
-		return $this->dbProvider->getReplicaDatabase( 'MultiMail' );
+		return $this->dbProvider->getReplicaDatabase( 'virtual-multimail' );
 	}
 
 	/**

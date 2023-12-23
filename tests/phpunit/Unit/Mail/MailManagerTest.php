@@ -36,7 +36,7 @@ class MailManagerTest extends MediaWikiUnitTestCase {
 		$db = $this->createNoOpMock( IDatabase::class );
 
 		$dbProvider = $this->createMock( IConnectionProvider::class );
-		$dbProvider->method( 'getReplicaDatabase' )->with( 'MultiMail' )->willReturn( $db );
+		$dbProvider->method( 'getReplicaDatabase' )->with( 'virtual-multimail' )->willReturn( $db );
 
 		$manager = new MailManager(
 			$dbProvider,
