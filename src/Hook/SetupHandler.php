@@ -23,10 +23,13 @@ class SetupHandler implements
 
 	/** @inheritDoc */
 	public function onLoadExtensionSchemaUpdates( $updater ): void {
-		$updater->addExtensionTable(
+		$updater->addExtensionUpdateOnVirtualDomain( [
+			'virtual-multimail',
+			'addTable',
 			'user_secondary_email',
-			__DIR__ . "/../../sql/{$updater->getDB()->getType()}/tables-generated.sql"
-		);
+			__DIR__ . "/../../sql/{$updater->getDB()->getType()}/tables-generated.sql",
+			true
+		] );
 	}
 
 	/**
