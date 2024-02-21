@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Lakejason0",
-			"Wzl19371"
+			"Wzl19371",
+			"Anterdc99"
 		]
 	},
 	"multimail-special-emailaddresses": "电子邮件地址",
@@ -36,6 +37,7 @@
 	"tooltip-multimail-special-change-primary-view-confirmation-submit": "更改主要电子邮件地址",
 	"multimail-special-change-primary-view-confirmation": "你确定要将你的主要电子邮件地址从$1更改为$2吗？",
 	"multimail-special-change-primary-view": "更改主要电子邮件地址",
+	"multimail-emails-confirm-broken-token": "无效的确认代码或用户ID。\n请检查您的电子邮件，确认链接有可能被您的邮件客户端截断。",
 	"multimail-emails-confirm-invalid": "无效的确认码。\n该确认码可能已经过期。",
 	"multimail-emails-confirm-success": "您的电子邮件地址现在已经确认。",
 	"multimail-special-delete-view-confirmation": "您确定要删除电子邮件地址$1吗？",
