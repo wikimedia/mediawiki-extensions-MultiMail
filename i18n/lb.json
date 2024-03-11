@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Volvox"
+		]
+	},
+	"multimail-special-emailaddresses": "E-Mail-Adressen",
+	"multimail-emails-pager-email": "E-Mail-Adress",
+	"multimail-special-add-email-view-new-email-label-message": "Nei E-Mail-Adress:",
+	"multimail-special-delete-view-confirmation-submit-label-message": "E-Mail-Adress läschen",
+	"multimail-js-dialog-cancel": "Ofbriechen",
+	"apihelp-multimail-param-email": "E-Mail-Adress."
+}
