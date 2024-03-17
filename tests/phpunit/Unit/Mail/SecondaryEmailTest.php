@@ -217,7 +217,7 @@ class SecondaryEmailTest extends MediaWikiUnitTestCase {
 		$timestamp = wfTimestamp( TS_UNIX );
 		MWTimestamp::setFakeTime( $timestamp );
 
-		list( $token, $expiry, $hashedToken ) = $email->generateNewConfirmationToken();
+		[ $token, $expiry, $hashedToken ] = $email->generateNewConfirmationToken();
 		static::assertEquals( 32, strlen( $token ) );
 		static::assertEquals( md5( $token ), $hashedToken );
 		static::assertEquals( wfTimestamp( TS_MW, $timestamp + 5 ), $expiry );
