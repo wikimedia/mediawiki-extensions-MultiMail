@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jeeputer"
+			"Jeeputer",
+			"Ebraminio"
 		]
 	},
 	"multimail-special-emailaddresses": "نشانی‌های ایمیل",
@@ -37,7 +38,7 @@
 	"multimail-special-request-confirmation-code-view-confirmation-email-sent": "یک شناسهٔ تأیید جدید به نشانی ایمیل شما فرستاده شد.",
 	"multimail-no-primary-email": "نشانی ایمیل اولیه الزامی است",
 	"multimail-email-disabled": "ایمیل غیرفعال است",
-	"multimail-manager-address-already-exists": "این نشانی ایمیل از پیش به این حساب متصل شده‌است.",
+	"multimail-manager-address-already-exists": "این نشانی ایمیل از پیش به این حساب متصل شده است.",
 	"multimail-emails-invalid-id": "نشانی ایمیل نامعتبر است",
 	"multimail-emails-invalid-id-body": "نشانی ایمیل انتخاب‌شده معتبر نیست.",
 	"multimail-js-dialog-cancel": "لغو",
