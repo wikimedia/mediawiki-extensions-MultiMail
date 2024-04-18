@@ -27,7 +27,7 @@
 	"multimail-special-change-primary-view-confirmation-submit-label-message": "تغییر نشانی ایمیل اولیه",
 	"tooltip-multimail-special-change-primary-view-confirmation-submit": "تغییر نشانی ایمیل اولیه",
 	"multimail-special-change-primary-view": "تغییر نشانی ایمیل اولیه",
-	"multimail-emails-confirm-invalid": "شناسهٔ تأیید نامعتبر است.\nممکن است که این شناسه منقضی شده‌باشد.",
+	"multimail-emails-confirm-invalid": "شناسهٔ تأیید نامعتبر است.\nممکن است که این شناسه منقضی شده باشد.",
 	"multimail-emails-confirm-success": "نشانی ایمیل شما اکنون تأیید شده است.",
 	"multimail-special-delete-view": "حذف $1",
 	"multimail-special-delete-view-confirmation-submit-label-message": "حذف نشانی ایمیل",
