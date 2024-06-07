@@ -85,7 +85,7 @@ NewEmailAddressDialog.prototype.getActionProcess = function ( action ) {
 		errorlang: mw.config.get( 'wgUserLanguage' ),
 		errorsuselocal: true,
 		formatversion: 2
-	} ).done( function () {
+	} ).done( () => {
 		actionWidget.popPending();
 		dialog.popPending();
 		dialog.close();
@@ -93,13 +93,13 @@ NewEmailAddressDialog.prototype.getActionProcess = function ( action ) {
 		dfd.resolve.apply( dialog );
 
 		if ( dialog.emailAuthenticationEnabled ) {
-			return OO.ui.alert( mw.msg( 'multimail-special-add-email-view-confirmation-sent' ) ).done( function () {
+			return OO.ui.alert( mw.msg( 'multimail-special-add-email-view-confirmation-sent' ) ).done( () => {
 				window.location.href = mw.util.getUrl( 'Special:EmailAddresses' );
 			} );
 		} else {
 			window.location.href = mw.util.getUrl( 'Special:EmailAddresses' );
 		}
-	} ).fail( function ( code, result ) {
+	} ).fail( ( code, result ) => {
 		actionWidget.popPending();
 		dialog.popPending();
 

@@ -43,7 +43,7 @@ function main() {
 			errorlang: mw.config.get( 'wgUserLanguage' ),
 			errorsuselocal: true,
 			formatversion: 2
-		} ).done( function ( result ) {
+		} ).done( ( result ) => {
 			windowManager.closeWindow( 'authenticationProgress' );
 
 			if ( result.multimail.status === 'ok' ) {
@@ -58,7 +58,7 @@ function main() {
 					'multimail-js-reauthentication-required',
 					mw.msg( 'ooui-dialog-message-accept' )
 				)
-			} ).closed.then( function ( confirmData ) {
+			} ).closed.then( ( confirmData ) => {
 				if ( !confirmData || confirmData.action !== 'accept' ) {
 					return;
 				}
@@ -69,7 +69,7 @@ function main() {
 					force: 'ChangeEmail'
 				} );
 			} );
-		} ).fail( function ( code, details ) {
+		} ).fail( ( code, details ) => {
 			windowManager.closeWindow( 'authenticationProgress' );
 
 			if ( code === 'http' && details.exception === 'abort' ) {
@@ -95,7 +95,7 @@ function main() {
 		} )
 	} );
 
-	const addEmailButton = OO.ui.infuse( $addEmailButton ).on( 'click', function () {
+	const addEmailButton = OO.ui.infuse( $addEmailButton ).on( 'click', () => {
 		verifyAuthenticationStatus( 0, 'addEmail' );
 	} );
 

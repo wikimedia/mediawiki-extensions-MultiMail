@@ -64,14 +64,14 @@ ConfirmActionDialog.prototype.getActionProcess = function ( action ) {
 		errorlang: mw.config.get( 'wgUserLanguage' ),
 		errorsuselocal: true,
 		formatversion: 2
-	} ).done( function () {
+	} ).done( () => {
 		dialog.popPending();
 		dialog.close();
 
 		dfd.resolve.apply( dialog );
 
 		window.location.href = mw.util.getUrl( 'Special:EmailAddresses' );
-	} ).fail( function ( code, result ) {
+	} ).fail( ( code, result ) => {
 		dialog.popPending();
 
 		dfd.reject.apply( dialog, [ new OO.ui.Error( api.getErrorMessage( result ) ) ] );
