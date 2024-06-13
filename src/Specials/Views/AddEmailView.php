@@ -16,7 +16,7 @@ class AddEmailView extends FormView {
 
 	/** @inheritDoc */
 	public function beforeForm( ?string $subpage ): void {
-		$this->getOutput()->setPageTitle( $this->msg( 'multimail-special-add-email-view' ) );
+		$this->getOutput()->setPageTitleMsg( $this->msg( 'multimail-special-add-email-view' ) );
 
 		$this->emailRequiresConfirming = $this->getConfig()->get( MainConfigNames::EmailAuthentication );
 

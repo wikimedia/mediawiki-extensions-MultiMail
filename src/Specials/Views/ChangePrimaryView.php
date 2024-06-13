@@ -10,7 +10,7 @@ use Status;
 class ChangePrimaryView extends ConfirmationView {
 	/** @inheritDoc */
 	protected function beforeForm( ?string $subpage ): void {
-		$this->getOutput()->setPageTitle( $this->msg( 'multimail-special-change-primary-view' ) );
+		$this->getOutput()->setPageTitleMsg( $this->msg( 'multimail-special-change-primary-view' ) );
 	}
 
 	/** @inheritDoc */
