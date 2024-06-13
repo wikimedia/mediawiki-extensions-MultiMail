@@ -10,7 +10,7 @@ use Status;
 class DeleteEmailView extends ConfirmationView {
 	/** @inheritDoc */
 	protected function beforeForm( ?string $subpage ): void {
-		$this->getOutput()->setPageTitle(
+		$this->getOutput()->setPageTitleMsg(
 			$this->msg( 'multimail-special-delete-view', $this->secondaryEmail->getEmail() )
 		);
 	}

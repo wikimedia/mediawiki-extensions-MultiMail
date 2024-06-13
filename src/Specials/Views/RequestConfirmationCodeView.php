@@ -10,7 +10,7 @@ use Status;
 class RequestConfirmationCodeView extends ConfirmationView {
 	/** @inheritDoc */
 	protected function beforeForm( ?string $subpage ): void {
-		$this->getOutput()->setPageTitle( $this->msg( 'multimail-special-request-confirmation-code-view' ) );
+		$this->getOutput()->setPageTitleMsg( $this->msg( 'multimail-special-request-confirmation-code-view' ) );
 	}
 
 	/** @inheritDoc */
