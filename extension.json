@@ -59,8 +59,10 @@
 				"multimail-emails-pager-make-primary-button-label"
 			],
 			"dependencies": [
-				"oojs-ui-windows",
-				"mediawiki.Uri"
+				"mediawiki.api",
+				"mediawiki.Uri",
+				"mediawiki.util",
+				"oojs-ui-windows"
 			]
 		},
 		"ext.MultiMail.styles": {
