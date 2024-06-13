@@ -12,6 +12,7 @@ use MediaWiki\Extension\MultiMail\Specials\Views\DeleteEmailView;
 use MediaWiki\Extension\MultiMail\Specials\Views\EmailsView;
 use MediaWiki\Extension\MultiMail\Specials\Views\RequestConfirmationCodeView;
 use MediaWiki\MainConfigNames;
+use MediaWiki\Message\Message;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\User\CentralId\CentralIdLookup;
 use UserNotLoggedIn;
@@ -118,9 +119,9 @@ class SpecialEmailAddresses extends SpecialPage {
 	}
 
 	/** @inheritDoc */
-	public function getDescription(): string {
+	public function getDescription(): Message {
 		// Override to prevent conflicts.
-		return $this->msg( 'multimail-special-emailaddresses' )->plain();
+		return $this->msg( 'multimail-special-emailaddresses' );
 	}
 
 	/** @inheritDoc */
