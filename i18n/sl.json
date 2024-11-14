@@ -71,7 +71,7 @@
 	"multimail-js-reauthentication-required": "Potrditi morate svojo identiteto. S klikom »$1« boste preusmerjeni na obrazec za prijavo. Po potrditvi boste preusmerjeni sem.",
 	"right-multimail": "Pregledovanje in urejanje dodatnih e-poštnih naslovov.",
 	"action-multimail": "pregledovanje in urejanje dodatnih e-poštnih naslovov.",
-	"apihelp-multimail-summary": "API-modul za JavaScript na [[Special:EmailAddresses]].",
+	"apihelp-multimail-summary": "Modul API-ja za JavaScript na [[Special:EmailAddresses]].",
 	"apihelp-multimail-param-email": "E-poštni naslov.",
 	"apihelp-multimail-param-id": "ID sekundarnega e-poštnega naslova, ki pripada trenutnemu uporabniku.",
 	"apihelp-multimail-param-mail-action": "Dejanje, ki naj se izvede s sekundarnim e-poštnim naslovom.",
