@@ -2,6 +2,7 @@
 
 namespace MediaWiki\Extension\MultiMail\Tests\Structure;
 
+use Generator;
 use MediaWiki\DB\AbstractSchemaValidator;
 use MediaWikiCoversValidator;
 use PHPUnit\Framework\TestCase;
@@ -14,15 +15,13 @@ use PHPUnit\Framework\TestCase;
 class AbstractSchemaValidationTest extends TestCase {
 	use MediaWikiCoversValidator;
 
-	/** @var AbstractSchemaValidator */
 	protected AbstractSchemaValidator $validator;
 
 	/** @inheritDoc */
 	protected function setUp(): void {
 		parent::setUp();
 
-		$this->validator = new AbstractSchemaValidator( [ $this, 'markTestSkipped' ] );
-		$this->validator->checkDependencies();
+		$this->validator = new AbstractSchemaValidator();
 	}
 
 	/**
@@ -39,11 +38,15 @@ class AbstractSchemaValidationTest extends TestCase {
 	/**
 	 * Data provider for testValidation.
 	 *
-	 * @return array
+	 * @return Generator
 	 */
-	public static function provideTestables(): array {
-		return [
-			'tables.json' => [ __DIR__ . '/../../../sql/tables.json' ]
-		];
+	public static function provideTestables(): Generator {
+		yield 'tables.json' => [ __DIR__ . '/../../../sql/tables.json' ];
+
+		foreach ( glob( __DIR__ . '/../../../sql/abstractSchemaChanges/*.json' ) as $schemaChange ) {
+			$fileName = pathinfo( $schemaChange, PATHINFO_BASENAME );
+
+			yield $fileName => [ $schemaChange ];
+		}
 	}
 }
