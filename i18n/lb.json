@@ -10,6 +10,7 @@
 	"multimail-special-add-email-view-new-email-label-message": "Nei E-Mail-Adress:",
 	"multimail-special-delete-view": "$1 läschen",
 	"multimail-special-delete-view-confirmation-submit-label-message": "E-Mail-Adress läschen",
+	"multimail-emails-invalid-id": "Ongülteg E-Mail-Adress",
 	"multimail-js-dialog-cancel": "Ofbriechen",
 	"apihelp-multimail-param-email": "E-Mail-Adress."
 }
