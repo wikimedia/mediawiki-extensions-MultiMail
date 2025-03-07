@@ -2,9 +2,9 @@
 
 namespace MediaWiki\Extension\MultiMail\Api;
 
-use ApiAuthManagerHelper;
-use ApiBase;
-use ApiMain;
+use MediaWiki\Api\ApiAuthManagerHelper;
+use MediaWiki\Api\ApiBase;
+use MediaWiki\Api\ApiMain;
 use MediaWiki\Auth\AuthManager;
 use MediaWiki\Extension\MultiMail\Mail\MailManager;
 use Wikimedia\ParamValidator\ParamValidator;

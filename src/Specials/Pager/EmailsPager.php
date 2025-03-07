@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\MultiMail\Specials\Pager;
 
-use IContextSource;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Pager\TablePager;
 use MediaWiki\SpecialPage\SpecialPage;

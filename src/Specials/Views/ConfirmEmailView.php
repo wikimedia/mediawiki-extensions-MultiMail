@@ -3,9 +3,9 @@
 namespace MediaWiki\Extension\MultiMail\Specials\Views;
 
 use MediaWiki\Extension\MultiMail\SpecialPage\Views\View;
+use MediaWiki\User\User;
 use Profiler;
 use ThrottledError;
-use User;
 use Wikimedia\ScopedCallback;
 use function explode;
 use function preg_match;

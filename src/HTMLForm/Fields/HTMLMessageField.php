@@ -2,12 +2,12 @@
 
 namespace MediaWiki\Extension\MultiMail\HTMLForm\Fields;
 
-use HTMLFormField;
 use InvalidArgumentException;
-use Message;
-use MessageSpecifier;
+use MediaWiki\HTMLForm\HTMLFormField;
+use MediaWiki\Message\Message;
 use OOUI\HtmlSnippet;
 use OOUI\MessageWidget;
+use Wikimedia\Message\MessageSpecifier;
 
 /**
  * HTMLFormField that shows the OOUI MessageWidget

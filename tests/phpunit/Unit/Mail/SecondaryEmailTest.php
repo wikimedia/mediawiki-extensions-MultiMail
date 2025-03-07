@@ -4,8 +4,8 @@ namespace MediaWiki\Extension\MultiMail\Tests\Unit\Mail;
 
 use MediaWiki\Extension\MultiMail\Mail\SecondaryEmail;
 use MediaWiki\User\User;
+use MediaWiki\Utils\MWTimestamp;
 use MediaWikiUnitTestCase;
-use MWTimestamp;
 use function md5;
 use function strlen;
 use function strtotime;

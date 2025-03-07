@@ -4,8 +4,8 @@ namespace MediaWiki\Extension\MultiMail\Specials\Views;
 
 use MediaWiki\Extension\MultiMail\HTMLForm\Fields\HTMLMessageField;
 use MediaWiki\Extension\MultiMail\SpecialPage\Views\ConfirmationView;
-use OOUIHTMLForm;
-use Status;
+use MediaWiki\HTMLForm\OOUIHTMLForm;
+use MediaWiki\Status\Status;
 
 class RequestConfirmationCodeView extends ConfirmationView {
 	/** @inheritDoc */

@@ -2,16 +2,16 @@
 
 namespace MediaWiki\Extension\MultiMail\SpecialPage\Views;
 
-use IContextSource;
 use MediaWiki\Config\Config;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\Extension\MultiMail\Mail\MailManager;
 use MediaWiki\Extension\MultiMail\Specials\SpecialEmailAddresses;
+use MediaWiki\Message\Message;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use Message;
-use MessageSpecifier;
+use Wikimedia\Message\MessageSpecifier;
 
 /**
  * @codeCoverageIgnore

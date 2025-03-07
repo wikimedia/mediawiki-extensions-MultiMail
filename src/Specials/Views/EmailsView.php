@@ -2,11 +2,11 @@
 
 namespace MediaWiki\Extension\MultiMail\Specials\Views;
 
-use CentralIdLookup;
 use MediaWiki\Extension\MultiMail\Mail\MailManager;
 use MediaWiki\Extension\MultiMail\SpecialPage\Views\View;
 use MediaWiki\Extension\MultiMail\Specials\Pager\EmailsPager;
 use MediaWiki\Extension\MultiMail\Specials\SpecialEmailAddresses;
+use MediaWiki\User\CentralId\CentralIdLookup;
 use OOUI\ButtonWidget;
 
 class EmailsView extends View {

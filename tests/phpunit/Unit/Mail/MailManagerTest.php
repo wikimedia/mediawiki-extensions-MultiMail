@@ -2,9 +2,9 @@
 
 namespace MediaWiki\Extension\MultiMail\Tests\Unit\Mail;
 
-use IContextSource;
 use InvalidArgumentException;
 use LogicException;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\Extension\MultiMail\Mail\MailManager;
 use MediaWiki\Extension\MultiMail\Mail\SecondaryEmail;
 use MediaWiki\HookContainer\HookContainer;

@@ -3,9 +3,9 @@
 namespace MediaWiki\Extension\MultiMail\Specials\Views;
 
 use MediaWiki\Extension\MultiMail\SpecialPage\Views\FormView;
+use MediaWiki\HTMLForm\OOUIHTMLForm;
 use MediaWiki\MainConfigNames;
-use OOUIHTMLForm;
-use Status;
+use MediaWiki\Status\Status;
 use function strlen;
 use function substr;
 

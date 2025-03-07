@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\MultiMail\SpecialPage\Views;
 
+use MediaWiki\HTMLForm\OOUIHTMLForm;
 use MediaWiki\Status\Status;
-use OOUIHTMLForm;
 
 abstract class FormView extends View {
 	/** @inheritDoc */

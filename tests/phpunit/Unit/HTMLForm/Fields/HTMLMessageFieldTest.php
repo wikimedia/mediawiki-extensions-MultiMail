@@ -2,10 +2,10 @@
 
 namespace MediaWiki\Extension\MultiMail\Tests\Unit\HTMLForm\Fields;
 
-use HTMLForm;
 use MediaWiki\Extension\MultiMail\HTMLForm\Fields\HTMLMessageField;
+use MediaWiki\HTMLForm\HTMLForm;
+use MediaWiki\Message\Message;
 use MediaWikiUnitTestCase;
-use Message;
 
 /**
  * @covers \MediaWiki\Extension\MultiMail\HTMLForm\Fields\HTMLMessageField

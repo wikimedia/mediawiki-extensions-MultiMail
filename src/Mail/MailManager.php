@@ -2,10 +2,10 @@
 
 namespace MediaWiki\Extension\MultiMail\Mail;
 
-use IContextSource;
 use InvalidArgumentException;
 use LogicException;
 use MailAddress;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\Extension\MultiMail\Hook\EmailHandler;
 use MediaWiki\Extension\MultiMail\Hook\HookRunner;
 use MediaWiki\HookContainer\HookContainer;

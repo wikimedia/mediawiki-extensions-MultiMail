@@ -2,51 +2,31 @@
 
 namespace MediaWiki\Extension\MultiMail\Tests\Structure;
 
-use Generator;
-use MediaWiki\DB\AbstractSchemaValidator;
-use MediaWikiCoversValidator;
-use PHPUnit\Framework\TestCase;
+use MediaWiki\Tests\Structure\AbstractSchemaTestBase;
 
 /**
  * Validates all abstract schemas.
  *
  * @coversNothing
  */
-class AbstractSchemaValidationTest extends TestCase {
-	use MediaWikiCoversValidator;
-
-	protected AbstractSchemaValidator $validator;
+class AbstractSchemaValidationTest extends AbstractSchemaTestBase {
 
 	/** @inheritDoc */
-	protected function setUp(): void {
-		parent::setUp();
-
-		$this->validator = new AbstractSchemaValidator();
+	protected static function getSchemasDirectory(): string {
+		return __DIR__ . '/../../../sql';
 	}
 
-	/**
-	 * @doesNotPerformAssertions
-	 *
-	 * @dataProvider provideTestables
-	 *
-	 * @param string $path
-	 */
-	public function testValidation( string $path ): void {
-		$this->validator->validate( $path );
+	/** @inheritDoc */
+	protected static function getSchemaChangesDirectory(): string {
+		return __DIR__ . '/../../../db_patches/abstractSchemaChanges/';
 	}
 
-	/**
-	 * Data provider for testValidation.
-	 *
-	 * @return Generator
-	 */
-	public static function provideTestables(): Generator {
-		yield 'tables.json' => [ __DIR__ . '/../../../sql/tables.json' ];
-
-		foreach ( glob( __DIR__ . '/../../../sql/abstractSchemaChanges/*.json' ) as $schemaChange ) {
-			$fileName = pathinfo( $schemaChange, PATHINFO_BASENAME );
-
-			yield $fileName => [ $schemaChange ];
-		}
+	/** @inheritDoc */
+	protected static function getSchemaSQLDirs(): array {
+		return [
+			'mysql' => __DIR__ . '/../../../sql/mysql',
+			'sqlite' => __DIR__ . '/../../../sql/sqlite',
+			'postgres' => __DIR__ . '/../../../sql/postgres',
+		];
 	}
 }
