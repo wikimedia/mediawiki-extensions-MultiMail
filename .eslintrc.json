@@ -8,6 +8,7 @@
 	"rules": {
 		"no-jquery/no-global-selector": "off",
 		"no-jquery/no-sizzle": "off",
-		"no-implicit-globals": "off"
+		"no-implicit-globals": "off",
+		"no-jquery/no-done-fail": "warn"
 	}
 }
