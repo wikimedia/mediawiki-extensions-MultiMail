@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"MathXplore",
+			"Shirayuki",
 			"Sou0012"
 		]
 	},
@@ -30,10 +31,10 @@
 	"multimail-special-request-confirmation-code-view-submit": "確認コードをリクエストする",
 	"tooltip-multimail-special-request-confirmation-code-view-submit": "確認コードをリクエストする",
 	"multimail-special-request-confirmation-code-view-confirmation-email-sent": "新しい確認コードがあなたのメールアドレスに送信されました。",
-	"multimail-special-request-confirmation-code-view-confirmation-email-pending": "確認コードはすでにEメールで送信されています。\n最近このメールアドレスを追加した場合は、新しいコードを要求する前に、それが届くまで数分待つとよいでしょう。",
+	"multimail-special-request-confirmation-code-view-confirmation-email-pending": "確認コードは既にメールで送信されています。\n最近このメールアドレスを追加した場合は、新しいコードを要求する前に、それが届くまで数分待つことをおすすめします。",
 	"multimail-email-disabled": "メールが無効になっています",
 	"multimail-manager-db-confirmation-code-add-fail": "確認コードをデータベースに保存できませんでした。",
-	"multimail-manager-address-already-exists": "このメールアドレスはすでにこのアカウントにリンクされています。",
+	"multimail-manager-address-already-exists": "このメールアドレスは既にこのアカウントにリンクされています。",
 	"multimail-emails-invalid-id": "無効なメールアドレスです",
 	"multimail-emails-invalid-id-body": "選択したメールアドレスは有効なメールアドレスではありません。",
 	"multimail-manager-no-such-email-in-db": "データベースからこのメールアドレスが見つかりませんでした。",
