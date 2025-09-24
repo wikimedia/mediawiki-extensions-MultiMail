@@ -61,7 +61,7 @@ NewEmailAddressDialog.prototype.getBodyHeight = function () {
 // Don't allow submitting when not a valid email address.
 NewEmailAddressDialog.prototype.onEmailInputChange = function ( value ) {
 	this.actions.setAbilities( {
-		add: value.indexOf( '@' ) !== -1
+		add: value.includes( '@' )
 	} );
 };
 

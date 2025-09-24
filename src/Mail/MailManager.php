@@ -308,7 +308,7 @@ class MailManager {
 	 *
 	 * @param string $address Email address
 	 * @param User $user User to register the email address for
-	 * @return Status Containing the SecondaryEmail instance if Good
+	 * @return Status<SecondaryEmail> Containing the SecondaryEmail instance if Good
 	 */
 	public function addEmail( string $address, User $user ): Status {
 		$status = $this->validateEmailAddress( $address );
