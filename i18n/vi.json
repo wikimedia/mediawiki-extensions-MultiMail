@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nguyenphutrong2"
+			"Nguyenphutrong2",
+			"Nvdtn19"
 		]
 	},
-	"multimail-special-emailaddresses-summary": "Trang này liệt kê các địa chỉ email của bạn được liên kết với tài khoản này. Bạn sẽ nhận được tin nhắn trên địa chỉ email chính của mình. Bạn có thể sử dụng trang đặc biệt này để thay đổi địa chỉ email chính của mình mà không cần xác nhận lại, cho phép bạn khôi phục quyền truy cập nếu bạn mất quyền truy cập vào địa chỉ email chính của mình."
+	"multimail-js-reauthentication-required": "Bạn cần xác minh danh tính của mình. Nhấp vào \"$1\" sẽ đưa bạn đến biểu mẫu đăng nhập. Sau khi xác minh, bạn sẽ được chuyển hướng đến đây.",
+	"right-multimail": "Xem và sửa các địa chỉ thư điện tử bổ sung của bạn",
+	"action-multimail": "xem và sửa các địa chỉ thư điện tử bổ sung của bạn",
+	"apihelp-multimail-summary": "Mô-đun API cho JavaScript trên [[Special:EmailAddresses]].",
+	"apihelp-multimail-param-email": "Địa chỉ thư điện tử."
 }
