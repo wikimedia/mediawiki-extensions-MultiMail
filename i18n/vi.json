@@ -1,7 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nguyenphutrong2"
+			"Nguyenphutrong2",
+			"Nvdtn19"
 		]
-	}
+	},
+	"multimail-js-reauthentication-required": "Bạn cần xác minh danh tính của mình. Nhấp vào \"$1\" sẽ đưa bạn đến biểu mẫu đăng nhập. Sau khi xác minh, bạn sẽ được chuyển hướng đến đây.",
+	"right-multimail": "Xem và sửa các địa chỉ thư điện tử bổ sung của bạn",
+	"action-multimail": "xem và sửa các địa chỉ thư điện tử bổ sung của bạn",
+	"apihelp-multimail-summary": "Mô-đun API cho JavaScript trên [[Special:EmailAddresses]].",
+	"apihelp-multimail-param-email": "Địa chỉ thư điện tử."
 }
