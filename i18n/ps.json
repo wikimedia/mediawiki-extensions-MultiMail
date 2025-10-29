@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"multimail-special-emailaddresses": "برېښليک پتې",
+	"multimail-extensionname": "گڼ‌برېښليکونه",
+	"multimail-emails-add-email-button-label": "نوې پته ورگډول",
+	"multimail-emails-pager-email": "برېښليک‌پته",
+	"multimail-emails-pager-status": "دريځ",
+	"multimail-emails-pager-buttons": "مهارول",
+	"multimail-emails-pager-make-primary-button-label": "بنسټيز کول",
+	"multimail-emails-pager-primary": "بنسټيز",
+	"multimail-special-request-confirmation-code-view-confirmation-email-pending": "د تاييد کوډ لادمخه ستاسو برېښليک ته لېږل شوی دی؛ که تاسو وسمهال دا برېښليک ورگډ کړی وي؛ نو ښايي چې د نوي کوډ غوښتنې کولو دمخه يو څو دقيقې په تمه شئ."
+}
