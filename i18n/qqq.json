@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Mainframe98",
-			"شاه زمان پټان"
+			"شاه زمان پټان",
+			"Toliño"
 		]
 	},
 	"multimail-special-emailaddresses": "The name of the extension's entry in Special:SpecialPages",
@@ -52,7 +53,7 @@
 	"tooltip-multimail-special-request-confirmation-code-view-submit": "Used as tooltip for the submit button.\n\nSee also:\n* {{msg-mw|multimail-special-request-confirmation-code-view-submit}}\n* {{msg-mw|access-multimail-special-request-confirmation-code-view-submit}}",
 	"access-multimail-special-request-confirmation-code-view-submit": "{{doc-accesskey}}\n\nSee also\n* {{msg-mw|multimail-special-request-confirmation-code-view-submit}}\n* {{msg-mw|tooltip-multimail-special-request-confirmation-code-view-submit}}",
 	"multimail-special-request-confirmation-code-view-confirmation-email-sent": "Message shown when a new confirmation code has been sent.",
-	"multimail-special-request-confirmation-code-view-confirmation-email-pending": "د تاييد کوډ لادمخه ستاسو برېښليک ته لېږل شوی دی؛ که تاسو وسمهال دا برېښليک ورگډ کړی وي؛ نو ښايي چې د نوي کوډ غوښتنې کولو دمخه يو څو دقيقې په تمه شئ.",
+	"multimail-special-request-confirmation-code-view-confirmation-email-pending": "Message shown when a confirmation email has already been sent.\n\nSee also:\n* {{msg-mw|confirmemail_pending}}",
 	"multimail-needlogin": "Error message shown when the user is not logged in when accessing the special page.\n\nSee also:\n* {{msg-mw|resetpass-no-info}}\n* {{msg-mw|confirmemail_needlogin}}\n* {{msg-mw|changeemail-no-info}}\n* {{msg-mw|resetpass-no-info}}",
 	"multimail-no-primary-email": "Title of the error page shown when the user has no email address set.",
 	"multimail-no-primary-body": "Error message shown when the user has no email address set.",
