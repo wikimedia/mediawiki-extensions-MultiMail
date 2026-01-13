@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sabelöga"
+			"Sabelöga",
+			"Stefan2255"
 		]
 	},
 	"multimail-special-emailaddresses": "E-postadresser",
@@ -35,6 +36,7 @@
 	"tooltip-multimail-special-change-primary-view-confirmation-submit": "Ändra primär e-postadress",
 	"multimail-special-change-primary-view-confirmation": "Är du säker på att du vill ändra din primära e-postadress från $1 till $2?",
 	"multimail-special-change-primary-view": "Ändra primär e-postadress",
+	"multimail-emails-confirm-broken-token": "Ogiltig bekräftelsekod eller användar-ID.\nKontrollera din e-post, bekräftelselänken kan ha blivit avkortad av din e-postklient.",
 	"multimail-emails-confirm-invalid": "Ogiltig bekräftelsekod.\nDess giltighetstid kan ha löpt ut.",
 	"multimail-emails-confirm-success": "Din e-postadress har nu bekräftats.",
 	"multimail-special-delete-view-confirmation": "Är du säker på att du vill ta bort e-postadressen $1?",
