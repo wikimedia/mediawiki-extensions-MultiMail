@@ -6,13 +6,12 @@ use MediaWiki\Extension\MultiMail\Mail\SecondaryEmail;
 use MediaWiki\User\User;
 use MediaWiki\Utils\MWTimestamp;
 use MediaWikiUnitTestCase;
+use Wikimedia\Timestamp\TimestampFormat;
 use function md5;
 use function strlen;
 use function strtotime;
 use function wfTimestamp;
 use function wfTimestampNow;
-use const TS_MW;
-use const TS_UNIX;
 
 /**
  * @covers \MediaWiki\Extension\MultiMail\Mail\SecondaryEmail
@@ -182,19 +181,19 @@ class SecondaryEmailTest extends MediaWikiUnitTestCase {
 			'Unconfirmed, token and expiry' => [
 				false,
 				'test token, please ignore',
-				wfTimestamp( TS_MW, strtotime( 'next week' ) ),
+				wfTimestamp( TimestampFormat::MW, strtotime( 'next week' ) ),
 				true
 			],
 			'Unconfirmed, expiry only' => [
 				false,
 				null,
-				wfTimestamp( TS_MW, strtotime( 'next week' ) ),
+				wfTimestamp( TimestampFormat::MW, strtotime( 'next week' ) ),
 				false
 			],
 			'Unconfirmed, outdated token' => [
 				false,
 				'test token, please ignore',
-				wfTimestamp( TS_MW, strtotime( '3 years ago' ) ),
+				wfTimestamp( TimestampFormat::MW, strtotime( '3 years ago' ) ),
 				false
 			]
 		];
@@ -214,13 +213,13 @@ class SecondaryEmailTest extends MediaWikiUnitTestCase {
 			5
 		);
 
-		$timestamp = wfTimestamp( TS_UNIX );
+		$timestamp = wfTimestamp( TimestampFormat::UNIX );
 		MWTimestamp::setFakeTime( $timestamp );
 
 		[ $token, $expiry, $hashedToken ] = $email->generateNewConfirmationToken();
 		static::assertEquals( 32, strlen( $token ) );
 		static::assertEquals( md5( $token ), $hashedToken );
-		static::assertEquals( wfTimestamp( TS_MW, $timestamp + 5 ), $expiry );
+		static::assertEquals( wfTimestamp( TimestampFormat::MW, $timestamp + 5 ), $expiry );
 
 		static::assertTrue( $email->isEmailConfirmationPending() );
 	}

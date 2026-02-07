@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\MultiMail\SpecialPage\Views;
 
-use ErrorPageError;
+use MediaWiki\Exception\ErrorPageError;
 use MediaWiki\Extension\MultiMail\Mail\SecondaryEmail;
 use function preg_match;
 

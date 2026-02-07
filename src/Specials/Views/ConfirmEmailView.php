@@ -2,10 +2,10 @@
 
 namespace MediaWiki\Extension\MultiMail\Specials\Views;
 
+use MediaWiki\Exception\ThrottledError;
 use MediaWiki\Extension\MultiMail\SpecialPage\Views\View;
+use MediaWiki\Profiler\Profiler;
 use MediaWiki\User\User;
-use Profiler;
-use ThrottledError;
 use Wikimedia\ScopedCallback;
 use function explode;
 use function preg_match;

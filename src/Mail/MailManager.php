@@ -4,13 +4,13 @@ namespace MediaWiki\Extension\MultiMail\Mail;
 
 use InvalidArgumentException;
 use LogicException;
-use MailAddress;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Extension\MultiMail\Hook\EmailHandler;
 use MediaWiki\Extension\MultiMail\Hook\HookRunner;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Mail\IEmailer;
+use MediaWiki\Mail\MailAddress;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Parser\Sanitizer;
 use MediaWiki\Status\Status;

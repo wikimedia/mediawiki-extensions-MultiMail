@@ -5,12 +5,12 @@ namespace MediaWiki\Extension\MultiMail\Mail;
 use MediaWiki\Mail\UserEmailContact;
 use MediaWiki\User\User;
 use MediaWiki\User\UserIdentity;
+use MediaWiki\Utils\MWCryptRand;
 use MediaWiki\Utils\MWTimestamp;
-use MWCryptRand;
 use stdClass;
+use Wikimedia\Timestamp\TimestampFormat;
 use function md5;
 use function wfTimestamp;
-use const TS_MW;
 
 class SecondaryEmail implements UserEmailContact {
 	private User $user;
@@ -111,7 +111,7 @@ class SecondaryEmail implements UserEmailContact {
 		$expires = MWTimestamp::time() + $this->userEmailConfirmationTokenExpiry;
 		$token = MWCryptRand::generateHex( 32 );
 		$this->emailToken = md5( $token );
-		$this->emailTokenExpires = wfTimestamp( TS_MW, $expires );
+		$this->emailTokenExpires = wfTimestamp( TimestampFormat::MW, $expires );
 
 		return [ $token, $this->emailTokenExpires, $this->emailToken ];
 	}
