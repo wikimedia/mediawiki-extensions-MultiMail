@@ -16,7 +16,6 @@ abstract class FormView extends View {
 			->showCancel()
 			->setCancelTarget( $this->getPageTitle() );
 
-		// @phan-suppress-next-line PhanTypeMismatchArgumentSuperType HTMLForm return types are too narrow.
 		$this->alterForm( $form );
 
 		if ( $form->show() ) {
