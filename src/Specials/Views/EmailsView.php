@@ -41,7 +41,7 @@ class EmailsView extends View {
 			'ext.MultiMail.styles'
 		] );
 
-		$out->addHTML( new ButtonWidget( [
+		$out->addHTML( (string)new ButtonWidget( [
 			'name' => 'new',
 			'id' => 'ext-multimail-new-email',
 			'href' => $this->getPageTitle( 'add' )->getLocalURL(),
