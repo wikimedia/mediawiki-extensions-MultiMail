@@ -8,8 +8,12 @@
 	"multimail-emails-pager-email": "E-pååʹštaddrõs",
 	"multimail-emails-pager-confirm-button-label": "Priim",
 	"multimail-special-add-email-view": "Lââʹzzet ođđ e-pååʹštaddrõõzz",
+	"multimail-special-add-email-view-new-email-label-message": "Ođđ e-pååʹštaddrõs:",
 	"multimail-special-add-email-view-submit-button-label-message": "Lââʹzzet ođđ e-pååʹštaddrõõzz",
 	"tooltip-multimail-special-add-email-view-submit": "Lââʹzzet ođđ e-pååʹštaddrõõzz",
+	"multimail-special-delete-view-confirmation-submit-label-message": "Jaukkâd e-pååʹštaddrõõzz",
+	"tooltip-multimail-special-delete-view-confirmation-submit": "Jaukkâd e-pååʹštaddrõõzz",
+	"multimail-emails-invalid-id": "Vââǥǥlaž e-pååʹštaddrõs",
 	"multimail-js-dialog-cancel": "Jõõsk",
 	"apihelp-multimail-param-email": "E-pååʹštaddrõs."
 }
