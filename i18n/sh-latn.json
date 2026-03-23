@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Aca",
 			"Winston Sung"
 		]
 	},
 	"multimail-special-emailaddresses": "Adrese e-pošte",
-	"multimail-special-emailaddresses-summary": "Ova stranica navodi vaše adrese e-pošte koje su povezane s ovim računom. Poruke ćete primati na osnovnu e-mail adresu. Ovu posebnu stranicu možete rabiti za promjenu osnovnih adresa e-pošte bez potrebe za ponovnom potvrdom, što vam omogućuje vraćanje pristupa ako ste izgubili pristup osnovnoj adresi e-pošte.",
+	"multimail-special-emailaddresses-summary": "Ova stranica navodi vaše adrese e-pošte koje su povezane s ovim računom. Poruke ćete primati na osnovnu e-mail adresu. Ovu posebnu stranicu možete koristiti za promjenu osnovnih adresa e-pošte bez potrebe za ponovnom potvrdom, što vam omogućuje vraćanje pristupa ako ste izgubili pristup osnovnoj adresi e-pošte.",
 	"multimail-desc": "Dodaje podršku za više adresa e-pošte",
 	"multimail-emails-add-email-button-label": "Dodaj novu adresu",
 	"multimail-emails-pager-email": "Adresa e-pošte",
