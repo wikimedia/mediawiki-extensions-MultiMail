@@ -22,7 +22,7 @@
 	"multimail-js-dialog-cancel": "Otkaži",
 	"right-multimail": "Pregled i uređivanje dodatnih adresi e-pošte.",
 	"action-multimail": "pregled i uređivanje dodatnih adresi e-pošte.",
-	"apihelp-multimail-summary": "Priložnički modul za JavaScript na [[Special:EmailAddresses]].",
+	"apihelp-multimail-summary": "API modul za JavaScript na [[Special:EmailAddresses]].",
 	"apihelp-multimail-param-email": "Adresa e-pošte.",
-	"apihelp-multimail-param-id": "Naznaka usporedne adrese e-pošte što pripada trenutnom korisniku."
+	"apihelp-multimail-param-id": "ID alternativne e-adrese koja pripada trenutnom korisniku."
 }
