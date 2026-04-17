@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Tensama0415",
 			"Ykhwong"
 		]
 	},
@@ -24,6 +25,7 @@
 	"tooltip-multimail-emails-pager-delete-label": "이 이메일 주소 삭제",
 	"multimail-special-add-email-view": "새 이메일 주소 추가",
 	"multimail-special-add-email-view-summary": "이 폼은 새 보조 이메일 주소를 등록합니다.",
+	"multimail-special-add-email-view-with-confirmation-summary": "이 폼은 새 보조 이메일 주소를 등록합니다. 이 이메일 주소로 확인 메일이 발송됩니다.",
 	"multimail-special-add-email-view-new-email-label-message": "새 이메일 주소:",
 	"multimail-invalid-email": "유효한 이메일 주소가 아닙니다.",
 	"multimail-special-add-email-view-submit-button-label-message": "새 이메일 주소 추가",
