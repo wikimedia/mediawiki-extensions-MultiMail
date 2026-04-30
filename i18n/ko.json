@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ykhwong"
+			"Ykhwong",
+			"Tensama0415"
 		]
 	},
 	"multimail-special-emailaddresses": "이메일 주소",
@@ -24,6 +25,7 @@
 	"tooltip-multimail-emails-pager-delete-label": "이 이메일 주소 삭제",
 	"multimail-special-add-email-view": "새 이메일 주소 추가",
 	"multimail-special-add-email-view-summary": "이 폼은 새 보조 이메일 주소를 등록합니다.",
+	"multimail-special-add-email-view-with-confirmation-summary": "이 폼은 새 보조 이메일 주소를 등록합니다. 이 이메일 주소로 확인 메일이 발송됩니다.",
 	"multimail-special-add-email-view-new-email-label-message": "새 이메일 주소:",
 	"multimail-invalid-email": "유효한 이메일 주소가 아닙니다.",
 	"multimail-special-add-email-view-submit-button-label-message": "새 이메일 주소 추가",
@@ -33,6 +35,7 @@
 	"tooltip-multimail-special-change-primary-view-confirmation-submit": "기본 이메일 주소 변경",
 	"multimail-special-change-primary-view-confirmation": "기본 이메일 주소를 $1에서 $2(으)로 변경하시겠습니까?",
 	"multimail-special-change-primary-view": "기본 이메일 주소 변경",
+	"multimail-emails-confirm-broken-token": "유효하지 않은 확인 코드 또는 사용자 ID입니다.\n이메일을 확인하십시오. 확인 링크가 이메일 클라이언트에 의해 잘려나갔을 수 있습니다.",
 	"multimail-emails-confirm-invalid": "인증 코드가 유효하지 않습니다.\n해당 코드가 만료되었을 수 있습니다.",
 	"multimail-emails-confirm-success": "이메일 주소가 인증되었습니다.",
 	"multimail-special-delete-view-confirmation": "$1 이메일 주소를 삭제하시겠습니까?",
