@@ -34,11 +34,16 @@ class SpecialEmailAddresses extends SpecialPage {
 		MailManager $mailManager,
 		CentralIdLookup $centralIdLookup
 	) {
-		parent::__construct( 'EmailAddresses', 'multimail' );
+		parent::__construct( 'EmailAddresses' );
 
 		$this->setAuthManager( $authManager );
 		$this->mailManager = $mailManager;
 		$this->centralIdLookup = $centralIdLookup;
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'multimail';
 	}
 
 	/**
