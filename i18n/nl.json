@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Mainframe98",
-			"McDutchie"
+			"McDutchie",
+			"Siebrand"
 		]
 	},
 	"multimail-special-emailaddresses": "E-mailadressen",
@@ -63,7 +64,7 @@
 	"multimail-manager-db-save-old-primary-fail": "Kan het oude e-mailadres niet opslaan in de database.",
 	"multimail-manager-address-already-exists": "Dit e-mailadres is al aan dit account gekoppeld.",
 	"multimail-manager-db-add-new-secondary-fail": "Kan het nieuwe e-mailadres niet opslaan in de database.",
-	"multimail-emails-invalid-id": "Ongeldig e-mailadres",
+	"multimail-emails-invalid-id": "Onjuist e-mailadres",
 	"multimail-emails-invalid-id-body": "Het geselecteerde e-mailadres is geen geldig e-mailadres.",
 	"multimail-manager-no-such-email-in-db": "Kon dit e-mailadres niet in de database vinden.",
 	"multimail-js-dialog-cancel": "Annuleren",
