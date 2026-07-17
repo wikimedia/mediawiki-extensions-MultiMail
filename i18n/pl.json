@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Rail"
+			"Rail",
+			"PanWor"
 		]
 	},
 	"multimail-special-emailaddresses": "Adresy e-mail",
@@ -44,7 +45,7 @@
 	"multimail-special-request-confirmation-code-view": "Wyślij kod potwierdzający",
 	"multimail-special-request-confirmation-code-view-submit": "Wyślij kod potwierdzający",
 	"tooltip-multimail-special-request-confirmation-code-view-submit": "Wyślij kod potwierdzający",
-	"multimail-special-request-confirmation-code-view-confirmation-email-sent": "Na twój adres e-mail został wysłany nowy kod potwierdzający.",
+	"multimail-special-request-confirmation-code-view-confirmation-email-sent": "Na Twój adres e-mail został wysłany nowy kod potwierdzający.",
 	"multimail-special-request-confirmation-code-view-confirmation-email-pending": "Kod potwierdzający został właśnie do ciebie wysłany. Jeśli niedawno dodałeś ten adres e-mail, poczekaj kilka minut na dostarczenie wiadomości przez kolejną prośbą o wysłanie kodu.",
 	"multimail-needlogin": "Musisz być zalogowany, by uzyskać bezpośredni dostęp do tej strony.",
 	"multimail-no-primary-email": "Główny adres e-mail jest niezbędny",
@@ -54,7 +55,7 @@
 	"multimail-manager-primary-email-not-confirmed": "Główny adres e-mail musi zostać potwierdzony, zanim będzie można go zmienić.",
 	"multimail-manager-secondary-email-not-confirmed": "Dodatkowy adres e-mail musi zostać potwierdzony, zanim będzie można go ustawić jako główny adres e-mail.",
 	"multimail-primary-swapped_subject": "Zmiana głównego adresu email na {{GRAMMAR:MS.lp|{{SITENAME}}}}",
-	"multimail-primary-swapped_body": "Witaj $1,\n\nTo jest automatyczna wiadomość informująca, że twój główny adres e-mail na {{GRAMMAR:MS.lp|{{SITENAME}}}} został zmieniony $4 z „$2” na „$3” z adresu IP $5. Jeżeli to nie ty, możesz wycofać tę zmianę odwiedzając $6.",
+	"multimail-primary-swapped_body": "Cześć $1,\n\nTo jest automatyczna wiadomość informująca, że Twój główny adres e-mail na {{GRAMMAR:MS.lp|{{SITENAME}}}} został zmieniony $4 z „$2” na „$3” z adresu IP $5. Jeżeli to nie Ty, możesz wycofać tę zmianę, odwiedzając $6.",
 	"multimail-confirmationmail-secondary_subject": "Potwierdzenie dodatkowego adresu e-mail na {{GRAMMAR:MS.lp|{{SITENAME}}}}",
 	"multimail-manager-db-confirmation-code-add-fail": "Nie udało się zapisać kodu potwierdzającego w bazie danych.",
 	"multimail-manager-db-save-old-primary-fail": "Nie udało się zapisać starego adresu e-mail w bazie danych.",
