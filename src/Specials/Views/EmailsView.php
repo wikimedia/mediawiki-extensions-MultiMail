@@ -6,6 +6,7 @@ use MediaWiki\Extension\MultiMail\Mail\MailManager;
 use MediaWiki\Extension\MultiMail\SpecialPage\Views\View;
 use MediaWiki\Extension\MultiMail\Specials\Pager\EmailsPager;
 use MediaWiki\Extension\MultiMail\Specials\SpecialEmailAddresses;
+use MediaWiki\Parser\ParserOptions;
 use MediaWiki\User\CentralId\CentralIdLookup;
 use OOUI\ButtonWidget;
 
@@ -58,6 +59,9 @@ class EmailsView extends View {
 			$this->mailManager->getReplicaMailDbConnection()
 		);
 
-		$out->addParserOutputContent( $pager->getFullOutput() );
+		$out->addParserOutputContent(
+			$pager->getFullOutput(),
+			ParserOptions::newFromContext( $this->getContext() )
+		);
 	}
 }
