@@ -12,5 +12,14 @@
 	"multimail-emails-pager-buttons": "مهارول",
 	"multimail-emails-pager-make-primary-button-label": "بنسټيز کول",
 	"multimail-emails-pager-primary": "بنسټيز",
+	"multimail-emails-pager-no-confirmation-needed": "د تاييدولو اړتيا نشته",
+	"multimail-emails-pager-primary-confirmed": "لومړنی، په $1 کې تاييد شوی",
+	"multimail-emails-pager-confirmed": "په $1 کې تاييد شوی",
+	"multimail-emails-pager-primary-unconfirmed": "لومړنی، ناتاييدشوی",
+	"multimail-emails-pager-unconfirmed": "ناتاييدشوی",
+	"multimail-emails-pager-confirm-button-label": "تاييد",
+	"multimail-emails-pager-delete-label": "دا برېښليک پته ړنگه کړئ",
+	"tooltip-multimail-emails-pager-delete-label": "دا برېښليک پته ړنگه کړئ",
+	"multimail-special-add-email-view": "يو نوې برېښليک پته ورگډه کړئ",
 	"multimail-special-request-confirmation-code-view-confirmation-email-pending": "د تاييد کوډ لادمخه ستاسو برېښليک ته لېږل شوی دی؛ که تاسو وسمهال دا برېښليک ورگډ کړی وي؛ نو ښايي چې د نوي کوډ غوښتنې کولو دمخه يو څو دقيقې په تمه شئ."
 }
