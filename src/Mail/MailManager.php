@@ -25,47 +25,20 @@ use function strlen;
 use function wfTimestampNow;
 
 class MailManager {
-	private IConnectionProvider $dbProvider;
+	private readonly HookRunner $hookRunner;
+	private readonly Title $emailConfirmTitle;
+	private readonly Title $emailUndoTitle;
 
-	private CentralIdLookup $centralIdLookup;
-
-	private IEmailer $emailer;
-
-	private HookRunner $hookRunner;
-
-	private bool $emailAuthentication;
-
-	private int $userEmailConfirmationTokenExpiry;
-
-	private Title $emailConfirmTitle;
-
-	private Title $emailUndoTitle;
-
-	/**
-	 * @param IConnectionProvider $dbProvider
-	 * @param CentralIdLookup $centralIdLookup
-	 * @param IEmailer $emailer
-	 * @param TitleFactory $titleFactory
-	 * @param HookContainer $hookContainer
-	 * @param bool $emailAuthentication
-	 * @param int $userEmailConfirmationTokenExpiry
-	 */
 	public function __construct(
-		IConnectionProvider $dbProvider,
-		CentralIdLookup $centralIdLookup,
-		IEmailer $emailer,
+		private readonly IConnectionProvider $dbProvider,
+		private readonly CentralIdLookup $centralIdLookup,
+		private readonly IEmailer $emailer,
 		TitleFactory $titleFactory,
 		HookContainer $hookContainer,
-		bool $emailAuthentication,
-		int $userEmailConfirmationTokenExpiry
+		private readonly bool $emailAuthentication,
+		private readonly int $userEmailConfirmationTokenExpiry,
 	) {
-		$this->dbProvider = $dbProvider;
-		$this->centralIdLookup = $centralIdLookup;
-		$this->emailer = $emailer;
 		$this->hookRunner = new HookRunner( $hookContainer );
-		$this->emailAuthentication = $emailAuthentication;
-		$this->userEmailConfirmationTokenExpiry = $userEmailConfirmationTokenExpiry;
-
 		$title = $titleFactory->makeTitle( NS_SPECIAL, 'EmailAddresses' );
 
 		$this->emailConfirmTitle = $title->getSubpage( 'confirm' );

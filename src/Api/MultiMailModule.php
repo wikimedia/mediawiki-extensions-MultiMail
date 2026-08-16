@@ -12,28 +12,16 @@ use Wikimedia\ParamValidator\TypeDef\NumericDef;
 use Wikimedia\ParamValidator\TypeDef\StringDef;
 
 class MultiMailModule extends ApiBase {
-	private MailManager $mailManager;
-
-	private AuthManager $authManager;
-
 	/**
 	 * @codeCoverageIgnore
-	 *
-	 * @param ApiMain $mainModule
-	 * @param string $moduleName
-	 * @param MailManager $mailManager
-	 * @param AuthManager $authManager
 	 */
 	public function __construct(
 		ApiMain $mainModule,
 		string $moduleName,
-		MailManager $mailManager,
-		AuthManager $authManager
+		private readonly MailManager $mailManager,
+		private readonly AuthManager $authManager,
 	) {
 		parent::__construct( $mainModule, $moduleName );
-
-		$this->mailManager = $mailManager;
-		$this->authManager = $authManager;
 	}
 
 	/** @inheritDoc */

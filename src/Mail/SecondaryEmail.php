@@ -13,21 +13,15 @@ use function md5;
 use function wfTimestamp;
 
 class SecondaryEmail implements UserEmailContact {
-	private User $user;
+	private readonly int $id;
 
-	private int $id;
+	private readonly string $emailAddress;
 
-	private string $emailAddress;
-
-	private ?string $emailAuthenticationTimestamp;
+	private readonly ?string $emailAuthenticationTimestamp;
 
 	private ?string $emailToken;
 
 	private ?string $emailTokenExpires;
-
-	private bool $emailAuthenticationEnabled;
-
-	private int $userEmailConfirmationTokenExpiry;
 
 	/**
 	 * Creates a new secondary email address.
@@ -38,19 +32,16 @@ class SecondaryEmail implements UserEmailContact {
 	 * @param int $userEmailConfirmationTokenExpiry Life time of confirmation tokens
 	 */
 	public function __construct(
-		User $user,
+		private readonly User $user,
 		stdClass $row,
-		bool $emailAuthenticationEnabled,
-		int $userEmailConfirmationTokenExpiry
+		private readonly bool $emailAuthenticationEnabled,
+		private readonly int $userEmailConfirmationTokenExpiry,
 	) {
-		$this->user = $user;
 		$this->id = $row->use_id;
 		$this->emailAddress = $row->use_email;
 		$this->emailAuthenticationTimestamp = $row->use_email_authenticated;
 		$this->emailToken = $row->use_email_token;
 		$this->emailTokenExpires = $row->use_email_token_expires;
-		$this->emailAuthenticationEnabled = $emailAuthenticationEnabled;
-		$this->userEmailConfirmationTokenExpiry = $userEmailConfirmationTokenExpiry;
 	}
 
 	/**

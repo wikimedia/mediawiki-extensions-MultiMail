@@ -10,15 +10,12 @@ use MediaWiki\User\Hook\ConfirmEmailCompleteHook;
 class EmailHandler implements ConfirmEmailCompleteHook, PrefsEmailAuditHook {
 	private static bool $isCalledFromMultiMail = false;
 
-	private MailManager $mailManager;
-
 	/**
 	 * @codeCoverageIgnore
-	 *
-	 * @param MailManager $mailManager
 	 */
-	public function __construct( MailManager $mailManager ) {
-		$this->mailManager = $mailManager;
+	public function __construct(
+		private readonly MailManager $mailManager,
+	) {
 	}
 
 	/**

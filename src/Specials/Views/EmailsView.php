@@ -11,23 +11,15 @@ use MediaWiki\User\CentralId\CentralIdLookup;
 use OOUI\ButtonWidget;
 
 class EmailsView extends View {
-	private CentralIdLookup $centralIdLookup;
-
 	/**
 	 * @codeCoverageIgnore
-	 *
-	 * @param SpecialEmailAddresses $parent
-	 * @param MailManager $mailManager
-	 * @param CentralIdLookup $centralIdLookup
 	 */
 	public function __construct(
 		SpecialEmailAddresses $parent,
 		MailManager $mailManager,
-		CentralIdLookup $centralIdLookup
+		private readonly CentralIdLookup $centralIdLookup,
 	) {
 		parent::__construct( $parent, $mailManager );
-
-		$this->centralIdLookup = $centralIdLookup;
 	}
 
 	/** @inheritDoc */

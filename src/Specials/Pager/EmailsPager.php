@@ -16,23 +16,15 @@ use function htmlspecialchars;
 use function iterator_to_array;
 
 class EmailsPager extends TablePager {
-	private CentralIdLookup $centralIdLookup;
-
-	private bool $emailAuthentication;
+	private readonly bool $emailAuthentication;
 
 	private int $buttonCounter;
 
-	/**
-	 * @param IContextSource $context
-	 * @param CentralIdLookup $centralIdLookup
-	 * @param IReadableDatabase $mailDb
-	 */
 	public function __construct(
 		IContextSource $context,
-		CentralIdLookup $centralIdLookup,
+		private readonly CentralIdLookup $centralIdLookup,
 		IReadableDatabase $mailDb
 	) {
-		$this->centralIdLookup = $centralIdLookup;
 		$this->mDb = $mailDb;
 		$this->emailAuthentication = $context->getConfig()->get( MainConfigNames::EmailAuthentication );
 

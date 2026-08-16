@@ -28,12 +28,8 @@ class HTMLMessageFieldTest extends MediaWikiUnitTestCase {
 			->willReturn( '' );
 
 		$field = new class( $config, $mockMessage ) extends HTMLMessageField {
-			private Message $mockMessage;
-
-			public function __construct( array $info, Message $mockMessage ) {
+			public function __construct( array $info, private readonly Message $mockMessage ) {
 				parent::__construct( $info );
-
-				$this->mockMessage = $mockMessage;
 			}
 
 			/** @inheritDoc */

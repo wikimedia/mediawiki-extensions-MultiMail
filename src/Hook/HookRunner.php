@@ -6,15 +6,12 @@ use MediaWiki\Hook\PrefsEmailAuditHook;
 use MediaWiki\HookContainer\HookContainer;
 
 class HookRunner implements PrefsEmailAuditHook {
-	private HookContainer $hookContainer;
-
 	/**
 	 * @codeCoverageIgnore
-	 *
-	 * @param HookContainer $hookContainer
 	 */
-	public function __construct( HookContainer $hookContainer ) {
-		$this->hookContainer = $hookContainer;
+	public function __construct(
+		private readonly HookContainer $hookContainer,
+	) {
 	}
 
 	/** @inheritDoc */

@@ -17,17 +17,10 @@ use Wikimedia\Message\MessageSpecifier;
  * @codeCoverageIgnore
  */
 abstract class View {
-	private SpecialEmailAddresses $parent;
-
-	protected MailManager $mailManager;
-
-	/**
-	 * @param SpecialEmailAddresses $parent
-	 * @param MailManager $mailManager
-	 */
-	public function __construct( SpecialEmailAddresses $parent, MailManager $mailManager ) {
-		$this->parent = $parent;
-		$this->mailManager = $mailManager;
+	public function __construct(
+		private readonly SpecialEmailAddresses $parent,
+		protected readonly MailManager $mailManager,
+	) {
 	}
 
 	/**

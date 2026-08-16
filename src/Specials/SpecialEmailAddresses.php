@@ -20,25 +20,14 @@ use function str_starts_with;
 use function substr_count;
 
 class SpecialEmailAddresses extends SpecialPage {
-	private MailManager $mailManager;
-
-	private CentralIdLookup $centralIdLookup;
-
-	/**
-	 * @param AuthManager $authManager
-	 * @param MailManager $mailManager
-	 * @param CentralIdLookup $centralIdLookup
-	 */
 	public function __construct(
 		AuthManager $authManager,
-		MailManager $mailManager,
-		CentralIdLookup $centralIdLookup
+		private readonly MailManager $mailManager,
+		private readonly CentralIdLookup $centralIdLookup,
 	) {
 		parent::__construct( 'EmailAddresses' );
 
 		$this->setAuthManager( $authManager );
-		$this->mailManager = $mailManager;
-		$this->centralIdLookup = $centralIdLookup;
 	}
 
 	/** @inheritDoc */
