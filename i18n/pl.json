@@ -47,7 +47,7 @@
 	"tooltip-multimail-special-request-confirmation-code-view-submit": "Wyślij kod potwierdzający",
 	"multimail-special-request-confirmation-code-view-confirmation-email-sent": "Na Twój adres e-mail został wysłany nowy kod potwierdzający.",
 	"multimail-special-request-confirmation-code-view-confirmation-email-pending": "Kod potwierdzający został właśnie do Ciebie wysłany. Jeśli ten adres e-mail został przez Ciebie dodany niedawno, poczekaj kilka minut na dostarczenie wiadomości przez kolejną prośbą o wysłanie kodu.",
-	"multimail-needlogin": "Musisz być zalogowany, by uzyskać bezpośredni dostęp do tej strony.",
+	"multimail-needlogin": "Musisz się zalogować, aby uzyskać bezpośredni dostęp do tej strony.",
 	"multimail-no-primary-email": "Główny adres e-mail jest niezbędny",
 	"multimail-no-primary-body": "Do korzystania z tej strony specjalnej wymagany jest główny adres e-mail. Możesz go ustawić w [[Special:Preferences#mw-prefsection-personal-email|swoich preferencjach]].",
 	"multimail-email-disabled": "Funkcje e-mail są wyłączone",
