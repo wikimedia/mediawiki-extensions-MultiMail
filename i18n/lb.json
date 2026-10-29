@@ -40,6 +40,7 @@
 	"multimail-needlogin": "Dir musst ageloggt sinn, fir direkt op dës Säit ze kommen.",
 	"multimail-no-primary-email": "Primär E-Mail-Adress néideg",
 	"multimail-emails-invalid-id": "Ongülteg E-Mail-Adress",
+	"multimail-emails-invalid-id-body": "Déi ausgewielt E-Mail-Adress ass keng gülteg E-Mail-Adress.",
 	"multimail-js-dialog-cancel": "Ofbriechen",
 	"apihelp-multimail-param-email": "E-Mail-Adress."
 }
